@@ -1,10 +1,31 @@
 [
 {
 	"uri": "http://mwidener.github.io/introduction/",
+	"title": "Course Information",
+	"tags": [],
+	"description": "",
+	"content": " This section has information about the course structure and where you can go to get help. "
+},
+{
+	"uri": "http://mwidener.github.io/introduction/syllabus/",
 	"title": "Syllabus",
 	"tags": [],
 	"description": "",
-	"content": " Course Syllabus    Week Topic Assignment Due     Week 1     Week 2     Week 3     Week 4     Week 5     Week 6     Week 7     Week 8     Week 9     Week 10     Week 11     Week 12     Week 13      "
+	"content": "   Week Topic Assignment Due     Week 1     Week 2     Week 3     Week 4     Week 5     Week 6     Week 7     Week 8     Week 9     Week 10     Week 11     Week 12     Week 13      "
+},
+{
+	"uri": "http://mwidener.github.io/introduction/instructor_info/",
+	"title": "Instructor Information",
+	"tags": [],
+	"description": "",
+	"content": " Prof. Michael Widener email: office hours:\nAdditional resources "
+},
+{
+	"uri": "http://mwidener.github.io/",
+	"title": "Home",
+	"tags": [],
+	"description": "",
+	"content": " Welcome to Developing Web Maps! Welcome to GGR 472: Developing Web Maps - Winter 2020. In this class we will explore how web maps are designed and created, using the MapBox GL JS API.\nCourse Overview Typically this course will consist of about one hour of lecture and then about an hour of hands-on development. Over the course of the term, we'll explore:   what web maps are good for, and what they\u0026rsquo;re less good for, what kinds of spatial data they use, how design considerations change for viewing spatial data online numerous interactive features, and how to do basic GIS online.\n  A note on coding: Given that we'll be using JavaScript, HTML, and CSS in this class, it is strongly recommended that students either have some previous experience with programming or commit to doing a little extra skills development outside of class. Part of the first week of class and the first assignment are dedicated to learning these languages, but you will likely need to keep up the training as we continue through the term. Like anything, you'll get better with these languages with practice! Don\u0026rsquo;t be this guy: "
 },
 {
 	"uri": "http://mwidener.github.io/lecture1/",
@@ -12,13 +33,6 @@
 	"tags": [],
 	"description": "",
 	"content": " Lecture 1 What are web maps? "
-},
-{
-	"uri": "http://mwidener.github.io/",
-	"title": "Welcome",
-	"tags": [],
-	"description": "",
-	"content": " Welcome to Web Maps! Welcome to GGR 472 - Winter 2020. In this class we will explore how web maps are designed and created, using the MapBox GL JS API.\nCourse Overview "
 },
 {
 	"uri": "http://mwidener.github.io/lecture1/second-content/",
