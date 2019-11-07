@@ -1,13 +1,27 @@
 [
 {
-	"uri": "http://mwidener.github.io/basics/",
+	"uri": "http://mwidener.github.io/introduction/",
+	"title": "Syllabus",
+	"tags": [],
+	"description": "",
+	"content": " Course Syllabus    Week Topic Assignment Due     Week 1     Week 2     Week 3     Week 4     Week 5     Week 6     Week 7     Week 8     Week 9     Week 10     Week 11     Week 12     Week 13      "
+},
+{
+	"uri": "http://mwidener.github.io/lecture1/",
 	"title": "Lecture 1",
 	"tags": [],
 	"description": "",
-	"content": " Lecture 1 Welcome to Web Maps! Welcome to GGR 472 - Winter 2020. In this class we will explore how web maps are designed and created, using the MapBox GL JS API.\nsomething else "
+	"content": " Lecture 1 What are web maps? "
 },
 {
-	"uri": "http://mwidener.github.io/basics/second-content/",
+	"uri": "http://mwidener.github.io/",
+	"title": "Welcome",
+	"tags": [],
+	"description": "",
+	"content": " Welcome to Web Maps! Welcome to GGR 472 - Winter 2020. In this class we will explore how web maps are designed and created, using the MapBox GL JS API.\nCourse Overview "
+},
+{
+	"uri": "http://mwidener.github.io/lecture1/second-content/",
 	"title": "Second Content",
 	"tags": [],
 	"description": "",
@@ -16,13 +30,6 @@
 {
 	"uri": "http://mwidener.github.io/categories/",
 	"title": "Categories",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "http://mwidener.github.io/",
-	"title": "GGR472 Winter 2020",
 	"tags": [],
 	"description": "",
 	"content": ""
