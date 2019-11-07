@@ -1,10 +1,10 @@
 [
 {
 	"uri": "http://mwidener.github.io/basics/",
-	"title": "Basics",
+	"title": "Lecture 1",
 	"tags": [],
 	"description": "",
-	"content": " Chapter 1 Some Chapter title Test text Michael2.\n##something else\n"
+	"content": " Lecture 1 Welcome to Web Maps! Welcome to GGR 472 - Winter 2020. In this class we will explore how web maps are designed and created, using the MapBox GL JS API.\nsomething else "
 },
 {
 	"uri": "http://mwidener.github.io/basics/second-content/",
