@@ -7,18 +7,18 @@
 	"content": "For ‘letter marked’ assignments, I will use the Faculty of Arts and Sciences marking criteria.  See syllabus for course policies on accessibility, accommodation, academic integrity and late assignments.  This course will have a lot of new material for most people, so as a general rule, it's best to keep an open line of communication with me! "
 },
 {
-	"uri": "http://mwidener.github.io/lecture1/lec1_3/",
-	"title": "Lec1_3",
+	"uri": "http://mwidener.github.io/",
+	"title": "Home",
+	"tags": [],
+	"description": "",
+	"content": "Welcome to Developing Web Maps! Welcome to GGR 472: Developing Web Maps - Winter 2020. In this class we will explore how web maps are designed and created, using the MapBox GL JS API.\nCourse Overview  what web maps are good for, and what they're less good for, what kinds of spatial data they use, how design considerations change for viewing spatial data online numerous interactive features, and how to do basic GIS online.  A note on coding: Don't be this guy: "
+},
+{
+	"uri": "http://mwidener.github.io/lecture1/lec1_2/",
+	"title": "Lec1_2",
 	"tags": [],
 	"description": "",
 	"content": ""
-},
-{
-	"uri": "http://mwidener.github.io/lecture2/",
-	"title": "Lecture 2",
-	"tags": [],
-	"description": "",
-	"content": "test "
 },
 {
 	"uri": "http://mwidener.github.io/introduction/",
@@ -26,6 +26,27 @@
 	"tags": [],
 	"description": "",
 	"content": "This section has information about the course structure and where you can go to get help. "
+},
+{
+	"uri": "http://mwidener.github.io/lecture1/lec1_3/",
+	"title": "Lec1_3",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "http://mwidener.github.io/lecture1/",
+	"title": "Lecture 1: Intro",
+	"tags": [],
+	"description": "",
+	"content": "Lecture 1 What are web maps?  What is this class about?  Investigating the history of web maps Exploring a range of web mapping tools Exploring a range of development methods Group work developing your own web map  "
+},
+{
+	"uri": "http://mwidener.github.io/lecture2/",
+	"title": "Lecture 2",
+	"tags": [],
+	"description": "",
+	"content": "test "
 },
 {
 	"uri": "http://mwidener.github.io/introduction/syllabus/",
@@ -40,27 +61,6 @@
 	"tags": [],
 	"description": "",
 	"content": "Prof. Michael Widener email: office hours:\nAdditional resources "
-},
-{
-	"uri": "http://mwidener.github.io/",
-	"title": "Home",
-	"tags": [],
-	"description": "",
-	"content": "Welcome to Developing Web Maps! Welcome to GGR 472: Developing Web Maps - Winter 2020. In this class we will explore how web maps are designed and created, using the MapBox GL JS API.\nCourse Overview  what web maps are good for, and what they're less good for, what kinds of spatial data they use, how design considerations change for viewing spatial data online numerous interactive features, and how to do basic GIS online.  A note on coding: Don't be this guy: "
-},
-{
-	"uri": "http://mwidener.github.io/lecture1/",
-	"title": "Lecture 1: Intro",
-	"tags": [],
-	"description": "",
-	"content": "Lecture 1 What are web maps?  What is this class about?  Investigating the history of web maps Exploring a range of web mapping tools Exploring a range of development methods Group work developing your own web map  "
-},
-{
-	"uri": "http://mwidener.github.io/lecture1/lec1_2/",
-	"title": "Lec1_2",
-	"tags": [],
-	"description": "",
-	"content": ""
 },
 {
 	"uri": "http://mwidener.github.io/categories/",
