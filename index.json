@@ -4,7 +4,7 @@
 	"title": "Review of Course Structure",
 	"tags": [],
 	"description": "",
-	"content": "For ‘letter marked’ assignments, I will use the Faculty of Arts and Sciences marking criteria.  See syllabus for course policies on accessibility, accommodation, academic integrity and late assignments.  This course will have a lot of new material for most people, so as a general rule, it's best to keep an open line of communication with me! "
+	"content": "For ‘letter marked’ assignments, I will use the Faculty of Arts and Sciences marking criteria.\n See syllabus for course policies on accessibility, accommodation, academic integrity and late assignments.\n This course will have a lot of new material for most people, so as a general rule, it's best to keep an open line of communication with me!\n Materials  Text editor  This is where you will write down and edit your code. A good editor is key! I recommend Atom or Sublime   Mapbox Account  www.mapbox.com   Lynda Access  access via this link to lynda at uoft   google or yahoo or bing or alta vista or whatever\u0026hellip;  "
 },
 {
 	"uri": "http://mwidener.github.io/",
@@ -15,10 +15,10 @@
 },
 {
 	"uri": "http://mwidener.github.io/lecture1/lec1_2/",
-	"title": "Lec1_2",
+	"title": "Programming",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "Programming is important! We'll be using three languages:\n JavaScript HTML CSS  Why do we need to program?  You can handle bigger projects and more data through automation and logic. This is the standard way that serious web mapping and web GIS is done. It looks great on your resume!  HTML  HyperText Markup Language  Files sent from servers to personal computers They tell the computer things like what to display or where to get data   HTML elements tell us things about where text should go, how it should be displayed, if an image should be centered  We express HTML elements through HTML tags  \u0026lt;html\u0026gt; ... \u0026lt;/html\u0026gt;     http://html.com/document/  CSS  Cascading Style Sheet  “Style sheet” code used to style the content of a web page. Interacts with HTML and describes how things should be sized, coloured, etc.  Can be more complicated     Helps separate the website content from website styling  Reduces repetition if you have multiple HTML docs   http://www.w3schools.com/css/default.asp  JavaScript  The de facto lingua franca of the world wide web Controls the behaviour of a webpage  HTML and CSS just describe   Javascript is a programming language  Conditional statements Logic Looping Data manipulation/handling    "
 },
 {
 	"uri": "http://mwidener.github.io/introduction/",
@@ -29,10 +29,10 @@
 },
 {
 	"uri": "http://mwidener.github.io/lecture1/lec1_3/",
-	"title": "Lec1_3",
+	"title": "Basic Programming Concepts",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "Basic Programming Concepts Variable assignment var x = 12 var blah = \u0026#34;some text that i\u0026#39;m writing right now!\u0026#34; blah = x y = blah - x Arrays var universities = [\u0026#34;UofT\u0026#34;, \u0026#34;Western\u0026#34;, \u0026#34;McMaster\u0026#34;]; universities[0] //will return \u0026#34;UofT\u0026#34; Conditional statements if (condition) { // block of code to be executed if the condition is true } An example from https://www.w3schools.com/js/js_if_else.asp\nif (hour \u0026lt; 18) { greeting = \u0026#34;Good day\u0026#34;; } else { greeting = \u0026#34;Good evening\u0026#34; } What would this return now?\nLoops var i; for (i = 0; i \u0026lt; universities.length; i++) { text += universities[i] + \u0026#34;\u0026lt;br\u0026gt;\u0026#34;; } /*will print: UofT Western McMaster */ To the board! "
 },
 {
 	"uri": "http://mwidener.github.io/lecture1/",
@@ -46,7 +46,7 @@
 	"title": "Lecture 2",
 	"tags": [],
 	"description": "",
-	"content": "test "
+	"content": "To be released week of January 13 "
 },
 {
 	"uri": "http://mwidener.github.io/introduction/syllabus/",
@@ -60,7 +60,7 @@
 	"title": "Instructor Information",
 	"tags": [],
 	"description": "",
-	"content": "Prof. Michael Widener email: office hours:\nAdditional resources "
+	"content": "Prof. Michael Widener email michael michael DOT widener AT utoronto DOT ca\noffice hours: Thursdays 1pm - 3pm Sid Smith Hall 5037\nAdditional resources  Mapbox GL JS API Mapbox GL JS Examples  "
 },
 {
 	"uri": "http://mwidener.github.io/categories/",

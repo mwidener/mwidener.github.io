@@ -9,23 +9,23 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Lec1_3 :: GGR472 Winter 2020</title>
+    <title>Basic Programming Concepts :: GGR472 Winter 2020</title>
 
     
-    <link href="/css/nucleus.css?1578087258" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1578087258" rel="stylesheet">
-    <link href="/css/hybrid.css?1578087258" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1578087258" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1578087258" rel="stylesheet">
-    <link href="/css/auto-complete.css?1578087258" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1578087258" rel="stylesheet">
-    <link href="/css/theme.css?1578087258" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1578087258" rel="stylesheet">
+    <link href="/css/nucleus.css?1578091919" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1578091919" rel="stylesheet">
+    <link href="/css/hybrid.css?1578091919" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1578091919" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1578091919" rel="stylesheet">
+    <link href="/css/auto-complete.css?1578091919" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1578091919" rel="stylesheet">
+    <link href="/css/theme.css?1578091919" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1578091919" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1578087258" rel="stylesheet">
+      <link href="/css/theme-blue.css?1578091919" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1578087258"></script>
+    <script src="/js/jquery-3.3.1.min.js?1578091919"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -131,14 +131,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1578087258"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1578087258"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1578091919"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1578091919"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/mwidener.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1578087258"></script>
+<script type="text/javascript" src="/js/search.js?1578091919"></script>
 
     
   </div>
@@ -281,13 +281,13 @@
  
   
     
-    <li data-nav-id="/lecture1/lec1_2/" title="Lec1_2" class="dd-item 
+    <li data-nav-id="/lecture1/lec1_2/" title="Programming" class="dd-item 
         
         
         
         ">
       <a href="/lecture1/lec1_2/">
-          Lec1_2
+          Programming
           
             <i class="fas fa-check read-icon"></i>
           
@@ -307,13 +307,13 @@
  
   
     
-    <li data-nav-id="/lecture1/lec1_3/" title="Lec1_3" class="dd-item 
+    <li data-nav-id="/lecture1/lec1_3/" title="Basic Programming Concepts" class="dd-item 
         parent
         active
         
         ">
       <a href="/lecture1/lec1_3/">
-          Lec1_3
+          Basic Programming Concepts
           
             <i class="fas fa-check read-icon"></i>
           
@@ -416,7 +416,7 @@
             
           
           
-            <a href='/'>Home</a> > <a href='/lecture1/'>Lecture 1: Intro</a> > Lec1_3
+            <a href='/'>Home</a> > <a href='/lecture1/'>Lecture 1: Intro</a> > Basic Programming Concepts
           
          
           
@@ -444,7 +444,41 @@
 
 
 
-	
+	<h1 id="basic-programming-concepts">Basic Programming Concepts</h1>
+<h2 id="variable-assignment">Variable assignment</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS">  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">blah</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;some text that i&#39;m writing right now!&#34;</span>
+  <span style="color:#a6e22e">blah</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>
+  <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">blah</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">x</span>
+</code></pre></div><h2 id="arrays">Arrays</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">universities</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;UofT&#34;</span>, <span style="color:#e6db74">&#34;Western&#34;</span>, <span style="color:#e6db74">&#34;McMaster&#34;</span>];
+<span style="color:#a6e22e">universities</span>[<span style="color:#ae81ff">0</span>] <span style="color:#75715e">//will return &#34;UofT&#34;
+</span></code></pre></div><h2 id="conditional-statements">Conditional statements</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">condition</span>) {
+  <span style="color:#75715e">//  block of code to be executed if the condition is true
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>An example from <a href="https://www.w3schools.com/js/js_if_else.asp">https://www.w3schools.com/js/js_if_else.asp</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">hour</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">18</span>) {
+  <span style="color:#a6e22e">greeting</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Good day&#34;</span>;
+}
+<span style="color:#66d9ef">else</span> {
+  <span style="color:#a6e22e">greeting</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Good evening&#34;</span>
+}
+</code></pre></div><p>What would this return now?</p>
+<h2 id="loops">Loops</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span>;
+<span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">universities</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+  <span style="color:#a6e22e">text</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">universities</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&lt;br&gt;&#34;</span>;
+}
+
+<span style="color:#75715e">/*will print:
+</span><span style="color:#75715e"> UofT
+</span><span style="color:#75715e"> Western
+</span><span style="color:#75715e"> McMaster
+</span><span style="color:#75715e"> */</span>
+</code></pre></div><h2 id="to-the-board">To the board!</h2>
+<p><img src="https://media.giphy.com/media/XoW4aVP3LhBaoB7FuJ/giphy.gif" alt="let's go"></p>
+
 
 
 
@@ -631,7 +665,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/lecture1/lec1_2/" title="Lec1_2"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/lecture1/lec1_2/" title="Programming"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/lecture2/" title="Lecture 2" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -644,19 +678,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1578087258"></script>
-    <script src="/js/perfect-scrollbar.min.js?1578087258"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1578087258"></script>
-    <script src="/js/jquery.sticky.js?1578087258"></script>
-    <script src="/js/featherlight.min.js?1578087258"></script>
-    <script src="/js/highlight.pack.js?1578087258"></script>
+    <script src="/js/clipboard.min.js?1578091919"></script>
+    <script src="/js/perfect-scrollbar.min.js?1578091919"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1578091919"></script>
+    <script src="/js/jquery.sticky.js?1578091919"></script>
+    <script src="/js/featherlight.min.js?1578091919"></script>
+    <script src="/js/highlight.pack.js?1578091919"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1578087258"></script>
-    <script src="/js/learn.js?1578087258"></script>
-    <script src="/js/hugo-learn.js?1578087258"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1578091919"></script>
+    <script src="/js/learn.js?1578091919"></script>
+    <script src="/js/hugo-learn.js?1578091919"></script>
 
-    <link href="/mermaid/mermaid.css?1578087258" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1578087258"></script>
+    <link href="/mermaid/mermaid.css?1578091919" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1578091919"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
