@@ -7,18 +7,18 @@
 	"content": "For ‘letter marked’ assignments, I will use the Faculty of Arts and Sciences marking criteria.  See syllabus for course policies on accessibility, accommodation, academic integrity and late assignments.  This course will have a lot of new material for most people, so as a general rule, it's best to keep an open line of communication with me! "
 },
 {
-	"uri": "http://mwidener.github.io/lecture1/lec1_2/",
-	"title": "Lec1_2",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "http://mwidener.github.io/lecture1/lec1_3/",
 	"title": "Lec1_3",
 	"tags": [],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "http://mwidener.github.io/lecture2/",
+	"title": "Lecture 2",
+	"tags": [],
+	"description": "",
+	"content": "test "
 },
 {
 	"uri": "http://mwidener.github.io/introduction/",
@@ -54,6 +54,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Lecture 1 What are web maps?  What is this class about?  Investigating the history of web maps Exploring a range of web mapping tools Exploring a range of development methods Group work developing your own web map  "
+},
+{
+	"uri": "http://mwidener.github.io/lecture1/lec1_2/",
+	"title": "Lec1_2",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "http://mwidener.github.io/categories/",
