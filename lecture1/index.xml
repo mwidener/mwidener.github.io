@@ -11,5 +11,32 @@
 	<atom:link href="http://mwidener.github.io/lecture1/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Review of Course Structure</title>
+      <link>http://mwidener.github.io/lecture1/lec1_1/</link>
+      <pubDate>Fri, 03 Jan 2020 15:16:16 -0500</pubDate>
+      
+      <guid>http://mwidener.github.io/lecture1/lec1_1/</guid>
+      <description>For ‘letter marked’ assignments, I will use the Faculty of Arts and Sciences marking criteria.  See syllabus for course policies on accessibility, accommodation, academic integrity and late assignments.  This course will have a lot of new material for most people, so as a general rule, it&#39;s best to keep an open line of communication with me! </description>
+    </item>
+    
+    <item>
+      <title>Lec1_2</title>
+      <link>http://mwidener.github.io/lecture1/lec1_2/</link>
+      <pubDate>Fri, 03 Jan 2020 15:17:34 -0500</pubDate>
+      
+      <guid>http://mwidener.github.io/lecture1/lec1_2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lec1_3</title>
+      <link>http://mwidener.github.io/lecture1/lec1_3/</link>
+      <pubDate>Fri, 03 Jan 2020 15:17:31 -0500</pubDate>
+      
+      <guid>http://mwidener.github.io/lecture1/lec1_3/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
