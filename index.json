@@ -71,7 +71,7 @@
 },
 {
 	"uri": "http://mwidener.github.io/lecture2/",
-	"title": "Lecture 2",
+	"title": "Lecture 2: Data",
 	"tags": [],
 	"description": "",
 	"content": "What are web maps? Web maps are just maps on the internet. They can be static or interactive \u0026hellip; but nowadays they're mostly interactive.\nEasy way to diffuse spatial information and provide interactivity.\nWeb maps help move geographic information systems and sciences to the world wide web.\nWeb mapping consists of three major components:  geography information the Web  In this class we're moving in a different direction than many of your previous GIS courses. How can we use the web to make mapping useful in new and different ways?\n"
@@ -88,7 +88,7 @@
 	"title": "Syllabus",
 	"tags": [],
 	"description": "",
-	"content": "   Week Topic Assignment Due     Week 1     Week 2     Week 3     Week 4     Week 5     Week 6     Week 7     Week 8     Week 9     Week 10     Week 11     Week 12     Week 13      "
+	"content": ""
 },
 {
 	"uri": "http://mwidener.github.io/introduction/instructor_info/",
