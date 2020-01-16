@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Basic Programming Concepts :: GGR472 Winter 2020</title>
+    <title>GML KML OSM-XML :: GGR472 Winter 2020</title>
 
     
     <link href="/css/nucleus.css?1579198860" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/lecture1/lec1_3/">
+  <body class="" data-url="/lecture2/lec2_6/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -227,7 +227,7 @@
   
     
     <li data-nav-id="/lecture1/" title="Lecture 1: Intro" class="dd-item 
-        parent
+        
         
         
         ">
@@ -308,8 +308,8 @@
   
     
     <li data-nav-id="/lecture1/lec1_3/" title="Basic Programming Concepts" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/lecture1/lec1_3/">
@@ -341,7 +341,7 @@
   
     
     <li data-nav-id="/lecture2/" title="Lecture 2" class="dd-item 
-        
+        parent
         
         
         ">
@@ -500,8 +500,8 @@
   
     
     <li data-nav-id="/lecture2/lec2_6/" title="GML KML OSM-XML" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/lecture2/lec2_6/">
@@ -584,7 +584,7 @@
             
           
           
-            <a href='/'>Home</a> > <a href='/lecture1/'>Lecture 1: Intro</a> > Basic Programming Concepts
+            <a href='/'>Home</a> > <a href='/lecture2/'>Lecture 2</a> > GML KML OSM-XML
           
          
           
@@ -612,40 +612,86 @@
 
 
 
-	<h1 id="basic-programming-concepts">Basic Programming Concepts</h1>
-<h2 id="variable-assignment">Variable assignment</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS">  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">blah</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;some text that i&#39;m writing right now!&#34;</span>
-  <span style="color:#a6e22e">blah</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>
-  <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">blah</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">x</span>
-</code></pre></div><h2 id="arrays">Arrays</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">universities</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;UofT&#34;</span>, <span style="color:#e6db74">&#34;Western&#34;</span>, <span style="color:#e6db74">&#34;McMaster&#34;</span>];
-<span style="color:#a6e22e">universities</span>[<span style="color:#ae81ff">0</span>] <span style="color:#75715e">//will return &#34;UofT&#34;
-</span></code></pre></div><h2 id="conditional-statements">Conditional statements</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">condition</span>) {
-  <span style="color:#75715e">//  block of code to be executed if the condition is true
-</span><span style="color:#75715e"></span>}
-</code></pre></div><p>An example from <a href="https://www.w3schools.com/js/js_if_else.asp">https://www.w3schools.com/js/js_if_else.asp</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">hour</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">18</span>) {
-  <span style="color:#a6e22e">greeting</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Good day&#34;</span>;
-}
-<span style="color:#66d9ef">else</span> {
-  <span style="color:#a6e22e">greeting</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Good evening&#34;</span>
-}
-</code></pre></div><p>What would this return now?</p>
-<h2 id="loops">Loops</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span>;
-<span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">universities</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
-  <span style="color:#a6e22e">text</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">universities</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&lt;br&gt;&#34;</span>;
-}
+	<h4 id="gml">GML</h4>
+<p>GML defines a variety of object types:</p>
+<ul>
+<li>Features</li>
+<li>Coordinate reference systems</li>
+<li>Geometry (simple and complex)</li>
+<li>Topology</li>
+<li>Time</li>
+<li>Units of Measure</li>
+<li>Generalized values</li>
+</ul>
+<p>GML geometries:</p>
+<ul>
+<li>Point</li>
+<li>LineString</li>
+<li>Polygon</li>
+<li>Newer versions of GML have the ability to represent coverages/raster</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">gml:Polygon</span>&gt;
+    &lt;<span style="color:#f92672">gml:outerBoundaryIs</span>&gt;
+            &lt;<span style="color:#f92672">gml:LinearRing</span>&gt;
+                    &lt;<span style="color:#f92672">gml:coordinates</span>&gt;0,0 100,0 100,100 0,100 0,0&lt;/<span style="color:#f92672">gml:coordinates</span>&gt;
+            &lt;/<span style="color:#f92672">gml:LinearRing</span>&gt;
+   &lt;/<span style="color:#f92672">gml:outerBoundaryIs</span>&gt;
+&lt;/<span style="color:#f92672">gml:Polygon</span>&gt;
 
-<span style="color:#75715e">/*will print:
-</span><span style="color:#75715e"> UofT
-</span><span style="color:#75715e"> Western
-</span><span style="color:#75715e"> McMaster
-</span><span style="color:#75715e"> */</span>
-</code></pre></div><h2 id="to-the-board">To the board!</h2>
-<p><img src="https://media.giphy.com/media/XoW4aVP3LhBaoB7FuJ/giphy.gif" alt="let's go"></p>
+&lt;<span style="color:#f92672">gml:Point</span>&gt;
+   &lt;<span style="color:#f92672">gml:coordinates</span>&gt;100,200&lt;/<span style="color:#f92672">gml:coordinates</span>&gt;
+&lt;/<span style="color:#f92672">gml:Point</span>&gt;
+
+&lt;<span style="color:#f92672">gml:LineString</span>&gt;
+   &lt;<span style="color:#f92672">gml:coordinates</span>&gt;100,200 150,300&lt;/<span style="color:#f92672">gml:coordinates</span>&gt;
+&lt;/<span style="color:#f92672">gml:LineString</span>&gt;
+</code></pre></div><h4 id="kml">KML</h4>
+<p>KML extends GML and maintains an open standard: <a href="https://developers.google.com/kml/documentation/kmlreference">OpenGIS KML Encoding Standard</a></p>
+<p><img src="kml_map.png" alt="kml map"></p>
+<h5 id="four-basic-ways-to-display-data">Four basic ways to display data:</h5>
+<ul>
+<li>Placemarks</li>
+<li>Polylines</li>
+<li>Polygons</li>
+<li>Overlays</li>
+</ul>
+<p>Difference between polylines and polygons is the first and last point is the same for polygons.</p>
+<p><a href="https://renenyffenegger.ch/notes/tools/Google-Earth/kml/index">Examples of how KML can be used here.</a></p>
+<h4 id="osm-xml">OSM XML</h4>
+<p><a href="http://openstreetmap.com">OpenStreetMap</a> XML is tag based, but not standardized in practice. It's based on XML, with different tags than GML/KML.</p>
+<p>Geometries:</p>
+<ul>
+<li>Node</li>
+<li>Way</li>
+<li>Closed way</li>
+</ul>
+<p><img src="node_way_closedway.png" alt="osm geometries"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;node</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;60006651&#34;</span> <span style="color:#a6e22e">visible=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">version=</span><span style="color:#e6db74">&#34;8&#34;</span> <span style="color:#a6e22e">changeset=</span><span style="color:#e6db74">&#34;14929023&#34;</span> <span style="color:#a6e22e">timestamp=</span><span style="color:#e6db74">&#34;2013-02-06T02:06:38Z&#34;</span> <span style="color:#a6e22e">user=</span><span style="color:#e6db74">&#34;andrewpmk&#34;</span> <span style="color:#a6e22e">uid=</span><span style="color:#e6db74">&#34;1679&#34;</span> <span style="color:#a6e22e">lat=</span><span style="color:#e6db74">&#34;43.6629666&#34;</span> <span style="color:#a6e22e">lon=</span><span style="color:#e6db74">&#34;-79.3974730&#34;</span><span style="color:#f92672">/&gt;</span>
+
+
+<span style="color:#f92672">&lt;way</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;8027962&#34;</span> <span style="color:#a6e22e">visible=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">version=</span><span style="color:#e6db74">&#34;13&#34;</span> <span style="color:#a6e22e">changeset=</span><span style="color:#e6db74">&#34;29433309&#34;</span> <span style="color:#a6e22e">timestamp=</span><span style="color:#e6db74">&#34;2015-03-12T19:30:13Z&#34;</span> <span style="color:#a6e22e">user=</span><span style="color:#e6db74">&#34;andrewpmk&#34;</span> <span style="color:#a6e22e">uid=</span><span style="color:#e6db74">&#34;1679&#34;</span><span style="color:#f92672">&gt;</span>  
+<span style="color:#f92672">&lt;nd</span> <span style="color:#a6e22e">ref=</span><span style="color:#e6db74">&#34;60006651&#34;</span><span style="color:#f92672">/&gt;</span>  
+<span style="color:#f92672">&lt;nd</span> <span style="color:#a6e22e">ref=</span><span style="color:#e6db74">&#34;2143468180&#34;</span><span style="color:#f92672">/&gt;</span>
+<span style="color:#f92672">&lt;nd</span> <span style="color:#a6e22e">ref=</span><span style="color:#e6db74">&#34;60006652&#34;</span><span style="color:#f92672">/&gt;</span>  
+<span style="color:#f92672">&lt;nd</span> <span style="color:#a6e22e">ref=</span><span style="color:#e6db74">&#34;60006653&#34;</span><span style="color:#f92672">/&gt;</span>  
+<span style="color:#f92672">&lt;nd</span> <span style="color:#a6e22e">ref=</span><span style="color:#e6db74">&#34;60006655&#34;</span><span style="color:#f92672">/&gt;</span>  
+<span style="color:#f92672">&lt;nd</span> <span style="color:#a6e22e">ref=</span><span style="color:#e6db74">&#34;60006647&#34;</span><span style="color:#f92672">/&gt;</span>  
+<span style="color:#f92672">&lt;nd</span> <span style="color:#a6e22e">ref=</span><span style="color:#e6db74">&#34;60006648&#34;</span><span style="color:#f92672">/&gt;</span>  
+<span style="color:#f92672">&lt;nd</span> <span style="color:#a6e22e">ref=</span><span style="color:#e6db74">&#34;60006649&#34;</span><span style="color:#f92672">/&gt;</span>  
+<span style="color:#f92672">&lt;nd</span> <span style="color:#a6e22e">ref=</span><span style="color:#e6db74">&#34;60006650&#34;</span><span style="color:#f92672">/&gt;</span>  
+<span style="color:#f92672">&lt;nd</span> <span style="color:#a6e22e">ref=</span><span style="color:#e6db74">&#34;60006651&#34;</span><span style="color:#f92672">/&gt;</span>
+<span style="color:#f92672">&lt;tag</span> <span style="color:#a6e22e">k=</span><span style="color:#e6db74">&#34;addr:city&#34;</span> <span style="color:#a6e22e">v=</span><span style="color:#e6db74">&#34;Toronto&#34;</span><span style="color:#f92672">/&gt;</span>  
+<span style="color:#f92672">&lt;tag</span> <span style="color:#a6e22e">k=</span><span style="color:#e6db74">&#34;addr:country&#34;</span> <span style="color:#a6e22e">v=</span><span style="color:#e6db74">&#34;CA&#34;</span><span style="color:#f92672">/&gt;</span>  
+<span style="color:#f92672">&lt;tag</span> <span style="color:#a6e22e">k=</span><span style="color:#e6db74">&#34;addr:housenumber&#34;</span> <span style="color:#a6e22e">v=</span><span style="color:#e6db74">&#34;73-75&#34;</span><span style="color:#f92672">/&gt;</span>  
+<span style="color:#f92672">&lt;tag</span> <span style="color:#a6e22e">k=</span><span style="color:#e6db74">&#34;addr:province&#34;</span> <span style="color:#a6e22e">v=</span><span style="color:#e6db74">&#34;ON&#34;</span><span style="color:#f92672">/&gt;</span>  
+<span style="color:#f92672">&lt;tag</span> <span style="color:#a6e22e">k=</span><span style="color:#e6db74">&#34;addr:street&#34;</span> <span style="color:#a6e22e">v=</span><span style="color:#e6db74">&#34;St. George Street&#34;</span><span style="color:#f92672">/&gt;</span>  
+<span style="color:#f92672">&lt;tag</span> <span style="color:#a6e22e">k=</span><span style="color:#e6db74">&#34;building&#34;</span> <span style="color:#a6e22e">v=</span><span style="color:#e6db74">&#34;university&#34;</span><span style="color:#f92672">/&gt;</span>  
+<span style="color:#f92672">&lt;tag</span> <span style="color:#a6e22e">k=</span><span style="color:#e6db74">&#34;college&#34;</span> <span style="color:#a6e22e">v=</span><span style="color:#e6db74">&#34;University College&#34;</span><span style="color:#f92672">/&gt;</span>  
+<span style="color:#f92672">&lt;tag</span> <span style="color:#a6e22e">k=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">v=</span><span style="color:#e6db74">&#34;Sir Daniel Wilson Residence (University College)&#34;</span><span style="color:#f92672">/&gt;</span>  
+<span style="color:#f92672">&lt;tag</span> <span style="color:#a6e22e">k=</span><span style="color:#e6db74">&#34;operator&#34;</span> <span style="color:#a6e22e">v=</span><span style="color:#e6db74">&#34;University of Toronto&#34;</span><span style="color:#f92672">/&gt;</span>
+<span style="color:#f92672">&lt;/way&gt;</span>
+
+</code></pre></div><h1 id="go-to-openstreetmap-and-download-some-data-inspect-nodeswaysclosed-ways">Go to OpenStreetMap and download some data. Inspect nodes/ways/closed ways.</h1>
 
 
 
@@ -739,80 +785,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -871,6 +843,60 @@
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -907,6 +933,23 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -931,10 +974,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/lecture1/lec1_2/" title="Programming"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/lecture2/lec2_5/" title="Spatial Data for the Web"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/lecture2/" title="Lecture 2" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/lecture2/lec2_1/" title="Strengths/Weaknesses of Web Maps" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

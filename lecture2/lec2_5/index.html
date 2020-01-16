@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Basic Programming Concepts :: GGR472 Winter 2020</title>
+    <title>Spatial Data for the Web :: GGR472 Winter 2020</title>
 
     
     <link href="/css/nucleus.css?1579198860" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/lecture1/lec1_3/">
+  <body class="" data-url="/lecture2/lec2_5/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -227,7 +227,7 @@
   
     
     <li data-nav-id="/lecture1/" title="Lecture 1: Intro" class="dd-item 
-        parent
+        
         
         
         ">
@@ -308,8 +308,8 @@
   
     
     <li data-nav-id="/lecture1/lec1_3/" title="Basic Programming Concepts" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/lecture1/lec1_3/">
@@ -341,7 +341,7 @@
   
     
     <li data-nav-id="/lecture2/" title="Lecture 2" class="dd-item 
-        
+        parent
         
         
         ">
@@ -474,8 +474,8 @@
   
     
     <li data-nav-id="/lecture2/lec2_5/" title="Spatial Data for the Web" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/lecture2/lec2_5/">
@@ -584,7 +584,7 @@
             
           
           
-            <a href='/'>Home</a> > <a href='/lecture1/'>Lecture 1: Intro</a> > Basic Programming Concepts
+            <a href='/'>Home</a> > <a href='/lecture2/'>Lecture 2</a> > Spatial Data for the Web
           
          
           
@@ -612,40 +612,38 @@
 
 
 
-	<h1 id="basic-programming-concepts">Basic Programming Concepts</h1>
-<h2 id="variable-assignment">Variable assignment</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS">  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">blah</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;some text that i&#39;m writing right now!&#34;</span>
-  <span style="color:#a6e22e">blah</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>
-  <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">blah</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">x</span>
-</code></pre></div><h2 id="arrays">Arrays</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">universities</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;UofT&#34;</span>, <span style="color:#e6db74">&#34;Western&#34;</span>, <span style="color:#e6db74">&#34;McMaster&#34;</span>];
-<span style="color:#a6e22e">universities</span>[<span style="color:#ae81ff">0</span>] <span style="color:#75715e">//will return &#34;UofT&#34;
-</span></code></pre></div><h2 id="conditional-statements">Conditional statements</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">condition</span>) {
-  <span style="color:#75715e">//  block of code to be executed if the condition is true
-</span><span style="color:#75715e"></span>}
-</code></pre></div><p>An example from <a href="https://www.w3schools.com/js/js_if_else.asp">https://www.w3schools.com/js/js_if_else.asp</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">hour</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">18</span>) {
-  <span style="color:#a6e22e">greeting</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Good day&#34;</span>;
-}
-<span style="color:#66d9ef">else</span> {
-  <span style="color:#a6e22e">greeting</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Good evening&#34;</span>
-}
-</code></pre></div><p>What would this return now?</p>
-<h2 id="loops">Loops</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span>;
-<span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">universities</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
-  <span style="color:#a6e22e">text</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">universities</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&lt;br&gt;&#34;</span>;
-}
-
-<span style="color:#75715e">/*will print:
-</span><span style="color:#75715e"> UofT
-</span><span style="color:#75715e"> Western
-</span><span style="color:#75715e"> McMaster
-</span><span style="color:#75715e"> */</span>
-</code></pre></div><h2 id="to-the-board">To the board!</h2>
-<p><img src="https://media.giphy.com/media/XoW4aVP3LhBaoB7FuJ/giphy.gif" alt="let's go"></p>
+	<h4 id="other-formats-more-common-in-web-world">Other formats more common in web world</h4>
+<p>Many other, compact data structures that work better for online transmission/compression</p>
+<p>One major format is based off of markup languages.</p>
+<ul>
+<li>What is XML?
+<ul>
+<li>Extensible Markup Language</li>
+<li>Store/transport data</li>
+<li>Human and machine readable</li>
+</ul>
+</li>
+<li>XML doesn’t do anything
+<ul>
+<li>Information wrapped in tags</li>
+<li>XML carries data, HTML designed to display data</li>
+<li>XML doesn’t have predefined tags (e.g. <!-- raw HTML omitted -->), HTML does</li>
+</ul>
+</li>
+</ul>
+<h4 id="xml-example">XML Example:</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;note</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#f92672">&lt;to</span><span style="color:#f92672">&gt;</span>Tove<span style="color:#f92672">&lt;/to&gt;</span>
+  <span style="color:#f92672">&lt;from</span><span style="color:#f92672">&gt;</span>Jani<span style="color:#f92672">&lt;/from&gt;</span>
+  <span style="color:#f92672">&lt;heading</span><span style="color:#f92672">&gt;</span>Reminder<span style="color:#f92672">&lt;/heading&gt;</span>
+  <span style="color:#f92672">&lt;body</span><span style="color:#f92672">&gt;</span>Don&#39;t forget me this weekend!<span style="color:#f92672">&lt;/body&gt;</span>
+<span style="color:#f92672">&lt;/note&gt;</span>
+</code></pre></div><p>A computer program reads the tags and displays the text based on predefined rules</p>
+<h2 id="note">NOTE</h2>
+<h5 id="to-tove">To: Tove</h5>
+<h5 id="from-jani">From: Jani</h5>
+<h4 id="reminder">Reminder</h4>
+<h5 id="_dont-forget-about-the-milk_"><em>Don't forget about the milk!</em></h5>
 
 
 
@@ -739,80 +737,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -843,6 +767,60 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -907,6 +885,26 @@
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -931,10 +929,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/lecture1/lec1_2/" title="Programming"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/lecture2/lec2_4/" title="Spatial Data"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/lecture2/" title="Lecture 2" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/lecture2/lec2_6/" title="GML KML OSM-XML" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Basic Programming Concepts :: GGR472 Winter 2020</title>
+    <title>Spatial Data :: GGR472 Winter 2020</title>
 
     
     <link href="/css/nucleus.css?1579198860" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/lecture1/lec1_3/">
+  <body class="" data-url="/lecture2/lec2_4/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -227,7 +227,7 @@
   
     
     <li data-nav-id="/lecture1/" title="Lecture 1: Intro" class="dd-item 
-        parent
+        
         
         
         ">
@@ -308,8 +308,8 @@
   
     
     <li data-nav-id="/lecture1/lec1_3/" title="Basic Programming Concepts" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/lecture1/lec1_3/">
@@ -341,7 +341,7 @@
   
     
     <li data-nav-id="/lecture2/" title="Lecture 2" class="dd-item 
-        
+        parent
         
         
         ">
@@ -448,8 +448,8 @@
   
     
     <li data-nav-id="/lecture2/lec2_4/" title="Spatial Data" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/lecture2/lec2_4/">
@@ -584,7 +584,7 @@
             
           
           
-            <a href='/'>Home</a> > <a href='/lecture1/'>Lecture 1: Intro</a> > Basic Programming Concepts
+            <a href='/'>Home</a> > <a href='/lecture2/'>Lecture 2</a> > Spatial Data
           
          
           
@@ -612,40 +612,72 @@
 
 
 
-	<h1 id="basic-programming-concepts">Basic Programming Concepts</h1>
-<h2 id="variable-assignment">Variable assignment</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS">  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">12</span>
-  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">blah</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;some text that i&#39;m writing right now!&#34;</span>
-  <span style="color:#a6e22e">blah</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>
-  <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">blah</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">x</span>
-</code></pre></div><h2 id="arrays">Arrays</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">universities</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;UofT&#34;</span>, <span style="color:#e6db74">&#34;Western&#34;</span>, <span style="color:#e6db74">&#34;McMaster&#34;</span>];
-<span style="color:#a6e22e">universities</span>[<span style="color:#ae81ff">0</span>] <span style="color:#75715e">//will return &#34;UofT&#34;
-</span></code></pre></div><h2 id="conditional-statements">Conditional statements</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">condition</span>) {
-  <span style="color:#75715e">//  block of code to be executed if the condition is true
-</span><span style="color:#75715e"></span>}
-</code></pre></div><p>An example from <a href="https://www.w3schools.com/js/js_if_else.asp">https://www.w3schools.com/js/js_if_else.asp</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">hour</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">18</span>) {
-  <span style="color:#a6e22e">greeting</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Good day&#34;</span>;
-}
-<span style="color:#66d9ef">else</span> {
-  <span style="color:#a6e22e">greeting</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Good evening&#34;</span>
-}
-</code></pre></div><p>What would this return now?</p>
-<h2 id="loops">Loops</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JS" data-lang="JS"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span>;
-<span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">universities</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
-  <span style="color:#a6e22e">text</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">universities</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&lt;br&gt;&#34;</span>;
-}
+	<h2 id="spatial-data-review">Spatial Data Review</h2>
+<h4 id="refresher">Refresher:</h4>
+<ul>
+<li>Points</li>
+<li>Lines</li>
+<li>Polygons</li>
+</ul>
+<p>How do we deal with these things in a computer?</p>
+<h4 id="data-model">Data Model</h4>
+<ul>
+<li>a set of constructs for describing and representing selected aspects of the real world in a computer.</li>
+<li>We need a model because the real world is infinitely complex.</li>
+</ul>
+<p><img src="raster_vector.png" alt="raster vs vector"></p>
+<h4 id="raster-files">Raster files:</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">ncols 480
+nrows 450
+xllcorner 378923
+yllcorner 4072345
+cellsize 30
+nodata_value -32768
 
-<span style="color:#75715e">/*will print:
-</span><span style="color:#75715e"> UofT
-</span><span style="color:#75715e"> Western
-</span><span style="color:#75715e"> McMaster
-</span><span style="color:#75715e"> */</span>
-</code></pre></div><h2 id="to-the-board">To the board!</h2>
-<p><img src="https://media.giphy.com/media/XoW4aVP3LhBaoB7FuJ/giphy.gif" alt="let's go"></p>
+43 2 45 7 3 56 2 5 23 65 34 6 32 54 57 34 2 2 54 6 ...
+35 45 65 34 2 6 78 4 2 6 89 3 2 7 45 23 5 8 4 1 62 ...
+43 2 45 7 3 56 2 5 23 65 34 6 32 54 57 34 2 2 54 6 ...
+35 45 65 34 2 6 78 4 2 6 89 3 2 7 45 23 5 8 4 1 62 ...
+43 2 45 7 3 56 2 5 23 65 34 6 32 54 57 34 2 2 54 6 ...
+35 45 65 34 2 6 78 4 2 6 89 3 2 7 45 23 5 8 4 1 62 ...
+</code></pre></div><h4 id="vector-data-model">Vector Data Model</h4>
+<ul>
+<li>More commonly associated with discrete data Concepts</li>
+<li>Three general geometric types
+<ul>
+<li>Point</li>
+<li>Polyline</li>
+<li>Polygon</li>
+</ul>
+</li>
+</ul>
+<h3 id="how-do-these-look-in-the-computer-it-depends">How do these look in the computer? It depends&hellip;</h3>
+<h4 id="at-the-most-basic-level">At the most basic level:</h4>
+<p><img src="points_lines_polys.png" alt="points lines polygons"></p>
+<h4 id="what-about-shapefiles">What about shapefiles?</h4>
+<p><img src="shapefileslist.png" alt="shapefiles">
+<img src="shapefiles_geometry.png" alt="shapefiles geometry"></p>
+<h3 id="this-is-a-lot-of-information-and-not-particularly-efficient">This is a lot of information and not particularly efficient.</h3>
+<p>That leads us to web mapping. Are shapefiles the way to go? Well, to understand why they aren't, it's helpful to understand a little about the internet.</p>
+<ul>
+<li>Packet switching
+<ul>
+<li>Data are broken into small chunks and passed from an origin to a destination</li>
+<li>Allows for many routes to the destination computer</li>
+</ul>
+</li>
+<li>Servers
+<ul>
+<li>Electronic filing cabinets that pass information when requested</li>
+</ul>
+</li>
+<li>Clients
+<ul>
+<li>Computers that get information from servers</li>
+</ul>
+</li>
+</ul>
+<p><img src="how_web_works.png" alt="the web"></p>
 
 
 
@@ -739,80 +771,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -871,6 +829,44 @@
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -891,6 +887,42 @@
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -931,10 +963,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/lecture1/lec1_2/" title="Programming"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/lecture2/lec2_3/" title="Making Web Maps"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/lecture2/" title="Lecture 2" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/lecture2/lec2_5/" title="Spatial Data for the Web" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
