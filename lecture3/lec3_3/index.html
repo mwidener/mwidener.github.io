@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Review of Course Structure :: GGR472 Winter 2020</title>
+    <title>GeoJSON polygons :: GGR472 Winter 2020</title>
 
     
     <link href="/css/nucleus.css?1579797591" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/lecture1/lec1_1/">
+  <body class="" data-url="/lecture3/lec3_3/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -227,7 +227,7 @@
   
     
     <li data-nav-id="/lecture1/" title="Lecture 1: Intro" class="dd-item 
-        parent
+        
         
         
         ">
@@ -256,8 +256,8 @@
   
     
     <li data-nav-id="/lecture1/lec1_1/" title="Review of Course Structure" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/lecture1/lec1_1/">
@@ -533,7 +533,7 @@
   
     
     <li data-nav-id="/lecture3/" title="Lecture 3: Data/Viz" class="dd-item 
-        
+        parent
         
         
         ">
@@ -614,8 +614,8 @@
   
     
     <li data-nav-id="/lecture3/lec3_3/" title="GeoJSON polygons" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/lecture3/lec3_3/">
@@ -880,7 +880,7 @@
             
           
           
-            <a href='/'>Home</a> > <a href='/lecture1/'>Lecture 1: Intro</a> > Review of Course Structure
+            <a href='/'>Home</a> > <a href='/lecture3/'>Lecture 3: Data/Viz</a> > GeoJSON polygons
           
          
           
@@ -908,35 +908,43 @@
 
 
 
-	<p>For ‘letter marked’ assignments,
-I will use the <a href="https://teaching.artsci.utoronto.ca/teachinginas/academichandbook-jitreminders/#finalcourse">Faculty of Arts and Sciences marking criteria</a>.</p>
-<hr>
-<p>See syllabus for course policies on accessibility, accommodation, academic integrity and late assignments.</p>
-<hr>
-<p>This course will have a lot of new material for most people, so as a general rule, it's best to keep an open line of communication with me!</p>
-<p><img src="https://media.giphy.com/media/3oEjHNubH09VO6F5m0/giphy.gif" alt="communication"></p>
-<hr>
-<h4 id="materials">Materials</h4>
+	<h4 id="polygons-can-be-quite-complicated">Polygons can be quite complicated.</h4>
+<h4 id="geojson-allows-for-an-easy-way-to-describe-polygons-with-multiple-interior-gaps">GeoJSON allows for an easy way to describe polygons with (multiple) interior gaps.</h4>
 <ul>
-<li>Text editor
+<li>Polgyon
 <ul>
-<li>This is where you will write down and edit your code. A good editor is key!</li>
-<li>I recommend <a href="www.atom.io">Atom</a> or <a href="https://www.sublimetext.com">Sublime</a></li>
+<li>LinearRing (exterior)
+<ul>
+<li>Positions</li>
 </ul>
 </li>
-<li>Mapbox Account
+<li>LinearRing (interior)
 <ul>
-<li><a href="http://www.mapbox.com">www.mapbox.com</a></li>
+<li>Positions</li>
 </ul>
 </li>
-<li>Lynda Access
+<li>LinearRing (interior)
 <ul>
-<li>access via <a href="https://onesearch.library.utoronto.ca/linkit/lyndacom-online-courses">this link to lynda at uoft</a></li>
+<li>Positions</li>
 </ul>
 </li>
-<li>google or yahoo or bing or alta vista or whatever&hellip;</li>
 </ul>
-<p><img src="https://media.giphy.com/media/3s26jowjrpFp0Z2d0W/giphy.gif" alt="ask jeeves!"></p>
+</li>
+</ul>
+<h4 id="only-1-exterior-ring-and-then-as-many-interior-rings-as-needed">Only 1 exterior ring and then as many interior rings as needed</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{ <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Polygon&#34;</span>,
+	<span style="color:#e6db74">&#34;coordinates&#34;</span><span style="color:#f92672">:</span> [
+			[[<span style="color:#ae81ff">35</span>,<span style="color:#ae81ff">10</span>], [<span style="color:#ae81ff">45</span>,<span style="color:#ae81ff">45</span>], [<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">40</span>], [<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">20</span>],[<span style="color:#ae81ff">35</span>,<span style="color:#ae81ff">10</span>]],
+			[[<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">30</span>], [<span style="color:#ae81ff">35</span>,<span style="color:#ae81ff">35</span>], [<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">20</span>], [<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">30</span>]]
+		]
+}
+</code></pre></div><h4 id="care-also-should-be-taken-with-coordinate-ordering-in-geojson-polygons">Care also should be taken with coordinate ordering in GeoJSON Polygons</h4>
+<h5 id="the-exterior-ring-should-be-counterclockwise">The exterior ring should be counterclockwise</h5>
+<h5 id="interior-rings-should-be-clockwise">Interior rings should be clockwise</h5>
+<h4 id="why-does-this-matter">Why does this matter?</h4>
+<h5 id="the-classic-chamberlain--duquette-algorithm-for-calculating-the-area-of-a-polygon-on-a-sphere-has-the-nice-property-that-counterclockwise-wound-polygons-have-positive-area-and-clockwise-yield-negative-if-you-ensure-winding-order-calculating-the-area-of-a-polygon-with-holes-is-as-simple-as-adding-the-areas-of-all-rings">The classic Chamberlain &amp; Duquette algorithm for calculating the area of a polygon on a sphere has the nice property that <em>counterclockwise-wound polygons have positive area and clockwise yield negative.</em> If you ensure winding order, calculating the area of a polygon with holes is as simple as adding the areas of all rings.</h5>
+<h5 id="winding-order-also-has-a-default-meaning-in-canvas-and-other-drawing-apis-drawing-a-path-with-counterclockwise-order-within-one-with-clockwise-order-will-cut-it-out-of-the-filled-image">Winding order also has a default meaning in Canvas and other drawing APIs: <em>drawing a path with counterclockwise order within one with clockwise order will cut it out of the filled image.</em></h5>
+<p><a href="http://www.macwright.org/2015/03/23/geojson-second-bite.html">source: More than you ever wanted to know about geojson</a></p>
 
 
 
@@ -1030,7 +1038,6 @@ I will use the <a href="https://teaching.artsci.utoronto.ca/teachinginas/academi
             
                 
                     
-                    
                 
                 
 
@@ -1040,124 +1047,6 @@ I will use the <a href="https://teaching.artsci.utoronto.ca/teachinginas/academi
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1277,6 +1166,128 @@ I will use the <a href="https://teaching.artsci.utoronto.ca/teachinginas/academi
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1397,10 +1408,10 @@ I will use the <a href="https://teaching.artsci.utoronto.ca/teachinginas/academi
 	 
 	 
 		
-			<a class="nav nav-prev" href="/lecture1/" title="Lecture 1: Intro"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/lecture3/lec3_2/" title="GeoJSON geometries"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/lecture1/lec1_2/" title="Programming" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/lecture3/lec3_4/" title="Limits of GeoJSON" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Review of Course Structure :: GGR472 Winter 2020</title>
+    <title>Web Cartography/Viz: Tiles! :: GGR472 Winter 2020</title>
 
     
     <link href="/css/nucleus.css?1579797591" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/lecture1/lec1_1/">
+  <body class="" data-url="/lecture3/lec3_7/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -227,7 +227,7 @@
   
     
     <li data-nav-id="/lecture1/" title="Lecture 1: Intro" class="dd-item 
-        parent
+        
         
         
         ">
@@ -256,8 +256,8 @@
   
     
     <li data-nav-id="/lecture1/lec1_1/" title="Review of Course Structure" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/lecture1/lec1_1/">
@@ -533,7 +533,7 @@
   
     
     <li data-nav-id="/lecture3/" title="Lecture 3: Data/Viz" class="dd-item 
-        
+        parent
         
         
         ">
@@ -718,8 +718,8 @@
   
     
     <li data-nav-id="/lecture3/lec3_7/" title="Web Cartography/Viz: Tiles!" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/lecture3/lec3_7/">
@@ -880,7 +880,7 @@
             
           
           
-            <a href='/'>Home</a> > <a href='/lecture1/'>Lecture 1: Intro</a> > Review of Course Structure
+            <a href='/'>Home</a> > <a href='/lecture3/'>Lecture 3: Data/Viz</a> > Web Cartography/Viz: Tiles!
           
          
           
@@ -908,35 +908,57 @@
 
 
 
-	<p>For ‘letter marked’ assignments,
-I will use the <a href="https://teaching.artsci.utoronto.ca/teachinginas/academichandbook-jitreminders/#finalcourse">Faculty of Arts and Sciences marking criteria</a>.</p>
-<hr>
-<p>See syllabus for course policies on accessibility, accommodation, academic integrity and late assignments.</p>
-<hr>
-<p>This course will have a lot of new material for most people, so as a general rule, it's best to keep an open line of communication with me!</p>
-<p><img src="https://media.giphy.com/media/3oEjHNubH09VO6F5m0/giphy.gif" alt="communication"></p>
-<hr>
-<h4 id="materials">Materials</h4>
+	<h2 id="web-cartography-and-visualization">Web Cartography and Visualization</h2>
 <ul>
-<li>Text editor
+<li>Slippy Maps
 <ul>
-<li>This is where you will write down and edit your code. A good editor is key!</li>
-<li>I recommend <a href="www.atom.io">Atom</a> or <a href="https://www.sublimetext.com">Sublime</a></li>
+<li>They slip as a user clicks and holds, dragging the map around in the browser</li>
 </ul>
 </li>
-<li>Mapbox Account
+<li>Conventions
 <ul>
-<li><a href="http://www.mapbox.com">www.mapbox.com</a></li>
+<li>256x256 pixel PNG files</li>
+<li>Each zoom level is a directory, each column is a subdirectory, and each tile is a file (.PNG)</li>
+<li>Filename format is: /zoom/x/y.png</li>
 </ul>
 </li>
-<li>Lynda Access
+</ul>
+<p><img src="tile_example1.png" alt="tile example 1"></p>
+<p>Different web maps have different tile conventions. At a basic level, a web map has a number of zoom levels.</p>
+<p>At each zoom level there are a collection of tiles, each representing a predefined area in space.</p>
+<p>If you're zoomed out (low resolution) there are fewer tiles. If you're zoomed in, there are more tiles.</p>
+<p><img src="number_of_tiles.png" alt="number of tiles"></p>
+<p>The tiles are generated using the geojson data (or OSMXML etc.) we've been working with.</p>
+<p><img src="tile_formats.png" alt="tile formats"></p>
+<p><img src="tile_example2.png" alt="tile example 2"></p>
+<h2 id="try-out-an-interactive-examplehttpwwwmaptilerorggoogle-maps-coordinates-tile-bounds-projection">Try out <a href="http://www.maptiler.org/google-maps-coordinates-tile-bounds-projection/">an interactive example</a></h2>
+<h4 id="if-were-working-with-image-tiles-we-refer-to-them-as-raster-tiles-if-were-working-with-vector-continuous-information-we-use-the-term-vector-tiles">If we're working with image tiles we refer to them as raster tiles. If we're working with vector (continuous) information, we use the term vector tiles.</h4>
+<h2 id="updates-to-individual-tiles">Updates to individual tiles</h2>
+<h4 id="tiles-are-updated-as-data-is-tweaked">Tiles are updated as data is tweaked.</h4>
+<h4 id="as-an-example-in-osm">As an example, in OSM:</h4>
 <ul>
-<li>access via <a href="https://onesearch.library.utoronto.ca/linkit/lyndacom-online-courses">this link to lynda at uoft</a></li>
+<li>In the past weekly updates of tiles based on edits made to OSM
+<ul>
+<li>Now, more fluid updates to tiles occur</li>
+<li><a href="http://wiki.openstreetmap.org/wiki/Slippy_Map#Mapnik_tile_rendering">http://wiki.openstreetmap.org/wiki/Slippy_Map#Mapnik_tile_rendering</a></li>
 </ul>
 </li>
-<li>google or yahoo or bing or alta vista or whatever&hellip;</li>
+<li><a href="http://tile.openstreetmap.org/10/286/373.png">http://tile.openstreetmap.org/10/286/373.png</a>
+<ul>
+<li>The tile</li>
 </ul>
-<p><img src="https://media.giphy.com/media/3s26jowjrpFp0Z2d0W/giphy.gif" alt="ask jeeves!"></p>
+</li>
+<li><a href="http://tile.openstreetmap.org/10/286/373.png/status">http://tile.openstreetmap.org/10/286/373.png/status</a>
+<ul>
+<li>Information on the tile, time of last render</li>
+</ul>
+</li>
+<li><a href="http://tile.openstreetmap.org/10/286/373.png/dirty">http://tile.openstreetmap.org/10/286/373.png/dirty</a>
+<ul>
+<li>Force a re-rendering of tile</li>
+</ul>
+</li>
+</ul>
 
 
 
@@ -1030,7 +1052,6 @@ I will use the <a href="https://teaching.artsci.utoronto.ca/teachinginas/academi
             
                 
                     
-                    
                 
                 
 
@@ -1040,124 +1061,6 @@ I will use the <a href="https://teaching.artsci.utoronto.ca/teachinginas/academi
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -1321,6 +1224,44 @@ I will use the <a href="https://teaching.artsci.utoronto.ca/teachinginas/academi
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -1341,6 +1282,90 @@ I will use the <a href="https://teaching.artsci.utoronto.ca/teachinginas/academi
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -1397,10 +1422,10 @@ I will use the <a href="https://teaching.artsci.utoronto.ca/teachinginas/academi
 	 
 	 
 		
-			<a class="nav nav-prev" href="/lecture1/" title="Lecture 1: Intro"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/lecture3/lec3_6/" title="GeoJSON editing exercise"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/lecture1/lec1_2/" title="Programming" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/lecture3/lec3_8/" title="Vector Tiles" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

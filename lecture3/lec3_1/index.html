@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Review of Course Structure :: GGR472 Winter 2020</title>
+    <title>GeoJSON components :: GGR472 Winter 2020</title>
 
     
     <link href="/css/nucleus.css?1579797591" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/lecture1/lec1_1/">
+  <body class="" data-url="/lecture3/lec3_1/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -227,7 +227,7 @@
   
     
     <li data-nav-id="/lecture1/" title="Lecture 1: Intro" class="dd-item 
-        parent
+        
         
         
         ">
@@ -256,8 +256,8 @@
   
     
     <li data-nav-id="/lecture1/lec1_1/" title="Review of Course Structure" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/lecture1/lec1_1/">
@@ -533,7 +533,7 @@
   
     
     <li data-nav-id="/lecture3/" title="Lecture 3: Data/Viz" class="dd-item 
-        
+        parent
         
         
         ">
@@ -562,8 +562,8 @@
   
     
     <li data-nav-id="/lecture3/lec3_1/" title="GeoJSON components" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/lecture3/lec3_1/">
@@ -880,7 +880,7 @@
             
           
           
-            <a href='/'>Home</a> > <a href='/lecture1/'>Lecture 1: Intro</a> > Review of Course Structure
+            <a href='/'>Home</a> > <a href='/lecture3/'>Lecture 3: Data/Viz</a> > GeoJSON components
           
          
           
@@ -908,35 +908,69 @@
 
 
 
-	<p>For ‘letter marked’ assignments,
-I will use the <a href="https://teaching.artsci.utoronto.ca/teachinginas/academichandbook-jitreminders/#finalcourse">Faculty of Arts and Sciences marking criteria</a>.</p>
-<hr>
-<p>See syllabus for course policies on accessibility, accommodation, academic integrity and late assignments.</p>
-<hr>
-<p>This course will have a lot of new material for most people, so as a general rule, it's best to keep an open line of communication with me!</p>
-<p><img src="https://media.giphy.com/media/3oEjHNubH09VO6F5m0/giphy.gif" alt="communication"></p>
-<hr>
-<h4 id="materials">Materials</h4>
+	<ul>
+<li>A Feature type is a spatial object
 <ul>
-<li>Text editor
-<ul>
-<li>This is where you will write down and edit your code. A good editor is key!</li>
-<li>I recommend <a href="www.atom.io">Atom</a> or <a href="https://www.sublimetext.com">Sublime</a></li>
+<li>Has geometry and properties</li>
+<li>It is possible to have multiple geometries, but this is very rare</li>
 </ul>
 </li>
-<li>Mapbox Account
+<li>A FeatureCollection type
 <ul>
-<li><a href="http://www.mapbox.com">www.mapbox.com</a></li>
+<li>Object that has feature objects</li>
 </ul>
 </li>
-<li>Lynda Access
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{ <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;FeatureCollection&#34;</span>,
+    <span style="color:#e6db74">&#34;features&#34;</span><span style="color:#f92672">:</span> [
+      { <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Feature&#34;</span>,
+        <span style="color:#e6db74">&#34;geometry&#34;</span><span style="color:#f92672">:</span> {<span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Point&#34;</span>, <span style="color:#e6db74">&#34;coordinates&#34;</span><span style="color:#f92672">:</span> [<span style="color:#ae81ff">102.0</span>, <span style="color:#ae81ff">0.5</span>]},
+        <span style="color:#e6db74">&#34;properties&#34;</span><span style="color:#f92672">:</span> {<span style="color:#e6db74">&#34;prop0&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;value0&#34;</span>}
+        },
+      { <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Feature&#34;</span>,
+        <span style="color:#e6db74">&#34;geometry&#34;</span><span style="color:#f92672">:</span> {
+          <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;LineString&#34;</span>,
+          <span style="color:#e6db74">&#34;coordinates&#34;</span><span style="color:#f92672">:</span> [
+            [<span style="color:#ae81ff">102.0</span>, <span style="color:#ae81ff">0.0</span>], [<span style="color:#ae81ff">103.0</span>, <span style="color:#ae81ff">1.0</span>], [<span style="color:#ae81ff">104.0</span>, <span style="color:#ae81ff">0.0</span>], [<span style="color:#ae81ff">105.0</span>, <span style="color:#ae81ff">1.0</span>]
+            ]
+          },
+        <span style="color:#e6db74">&#34;properties&#34;</span><span style="color:#f92672">:</span> {
+          <span style="color:#e6db74">&#34;prop0&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;value0&#34;</span>,
+          <span style="color:#e6db74">&#34;prop1&#34;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.0</span>
+          }
+        },
+      { <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Feature&#34;</span>,
+         <span style="color:#e6db74">&#34;geometry&#34;</span><span style="color:#f92672">:</span> {
+           <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Polygon&#34;</span>,
+           <span style="color:#e6db74">&#34;coordinates&#34;</span><span style="color:#f92672">:</span> [
+             [ [<span style="color:#ae81ff">100.0</span>, <span style="color:#ae81ff">0.0</span>], [<span style="color:#ae81ff">101.0</span>, <span style="color:#ae81ff">0.0</span>], [<span style="color:#ae81ff">101.0</span>, <span style="color:#ae81ff">1.0</span>],
+               [<span style="color:#ae81ff">100.0</span>, <span style="color:#ae81ff">1.0</span>], [<span style="color:#ae81ff">100.0</span>, <span style="color:#ae81ff">0.0</span>] ]
+             ]
+         },
+         <span style="color:#e6db74">&#34;properties&#34;</span><span style="color:#f92672">:</span> {
+           <span style="color:#e6db74">&#34;prop0&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;value0&#34;</span>,
+           <span style="color:#e6db74">&#34;prop1&#34;</span><span style="color:#f92672">:</span> {<span style="color:#e6db74">&#34;this&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;that&#34;</span>}
+           }
+         }
+       ]
+     }
+</code></pre></div><h4 id="from-geojsonorghttpgeojsonorg">From <a href="http://geojson.org">geojson.org</a>:</h4>
 <ul>
-<li>access via <a href="https://onesearch.library.utoronto.ca/linkit/lyndacom-online-courses">this link to lynda at uoft</a></li>
+<li>2.2. Feature Objects
+<ul>
+<li>A GeoJSON object with the type &ldquo;Feature&rdquo; is a feature object.</li>
+<li>A feature object must have a member with the name &ldquo;geometry&rdquo;. The value of the geometry member is a geometry object as defined above or a JSON null value.</li>
+<li>A feature object must have a member with the name &ldquo;properties&rdquo;. The value of the properties member is an object (any JSON object or a JSON null value).</li>
+<li>If a feature has a commonly used identifier, that identifier should be included as a member of the feature object with the name &ldquo;id&rdquo;.</li>
 </ul>
 </li>
-<li>google or yahoo or bing or alta vista or whatever&hellip;</li>
+<li>2.3. Feature Collection Objects
+<ul>
+<li>A GeoJSON object with the type &ldquo;FeatureCollection&rdquo; is a feature collection object.</li>
+<li>An object of type &ldquo;FeatureCollection&rdquo; must have a member with the name &ldquo;features&rdquo;. The value corresponding to &ldquo;features&rdquo; is an array. Each element in the array is a feature object as defined above.</li>
 </ul>
-<p><img src="https://media.giphy.com/media/3s26jowjrpFp0Z2d0W/giphy.gif" alt="ask jeeves!"></p>
+</li>
+</ul>
 
 
 
@@ -1030,7 +1064,6 @@ I will use the <a href="https://teaching.artsci.utoronto.ca/teachinginas/academi
             
                 
                     
-                    
                 
                 
 
@@ -1045,7 +1078,6 @@ I will use the <a href="https://teaching.artsci.utoronto.ca/teachinginas/academi
             
             
                 
-                    
                     
                 
                 
@@ -1062,9 +1094,6 @@ I will use the <a href="https://teaching.artsci.utoronto.ca/teachinginas/academi
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1215,6 +1244,7 @@ I will use the <a href="https://teaching.artsci.utoronto.ca/teachinginas/academi
             
                 
                     
+                    
                 
                 
 
@@ -1229,6 +1259,7 @@ I will use the <a href="https://teaching.artsci.utoronto.ca/teachinginas/academi
             
             
                 
+                    
                     
                 
                 
@@ -1245,6 +1276,9 @@ I will use the <a href="https://teaching.artsci.utoronto.ca/teachinginas/academi
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1397,10 +1431,10 @@ I will use the <a href="https://teaching.artsci.utoronto.ca/teachinginas/academi
 	 
 	 
 		
-			<a class="nav nav-prev" href="/lecture1/" title="Lecture 1: Intro"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/lecture3/" title="Lecture 3: Data/Viz"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/lecture1/lec1_2/" title="Programming" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/lecture3/lec3_2/" title="GeoJSON geometries" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
