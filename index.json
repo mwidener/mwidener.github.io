@@ -1,5 +1,12 @@
 [
 {
+	"uri": "http://mwidener.github.io/lecture4/lec4_1/",
+	"title": "MapBox Studio",
+	"tags": [],
+	"description": "",
+	"content": "MapBox Studio is your home base. https://studio.mapbox.com From here you can manually create maps and tweak their designs.\n  We can upload data\n \u0026hellip;and it'll be transformed from its native format into vector tiles. This happens in the \u0026ldquo;Datasets\u0026rdquo; section    We can also modify maps\n \u0026hellip;so that they're designed how we want. Take data they've precompiled and style them to our choosing. This happens in the \u0026ldquo;Styles\u0026rdquo; section.    "
+},
+{
 	"uri": "http://mwidener.github.io/lecture3/lec3_1/",
 	"title": "GeoJSON components",
 	"tags": [],
@@ -26,6 +33,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Welcome to Developing Web Maps! Welcome to GGR 472: Developing Web Maps - Winter 2020. In this class we will explore how web maps are designed and created, using the MapBox GL JS API.\nCourse Overview  what web maps are good for, and what they're less good for, what kinds of spatial data they use, how design considerations change for viewing spatial data online numerous interactive features, and how to do basic GIS online.  A note on coding: Don't be this guy: "
+},
+{
+	"uri": "http://mwidener.github.io/lecture4/lec4_2/",
+	"title": "Data/Styles in MapBox",
+	"tags": [],
+	"description": "",
+	"content": "Data in Mapbox  When we go to Data we can upload our own spatial files  MBTiles, KML, GPX, GeoJSON, Shapefile (zipped), CSV, GeoTIFF   If the file is vector data it will convert to a vector tile  PBF (mapbox vector tile format – “Protocolbuffer Binary Format”)   If the file is raster data it will convert to a raster tile  PNGs    EXAMPLE – Toronto Area Food Retailers (Points, geojson)\nEXAMPLE – US States (Polygons, geojson)\nStyling the Data   We can access the data we uploaded in the style section\n Edit colors, other traits    Limits to this method\n Need javascript to do more complicated styling    We can also download the whole thing as a json file\n Mapbox GL style spec https://www.mapbox.com/mapbox-gl-style-spec/ Open up example to see what else you can edit    EXERCISE  Add Toronto CMA, Toronto DAs, and Toronto Supermarkets as new tilesets  Create a new style   Add the three data layers  Make CMA visible at low zoom levels (higher altitude) Make DAs visible at medium zoom levels Add supermarkets, and stylize   Publish your map  "
 },
 {
 	"uri": "http://mwidener.github.io/lecture3/lec3_2/",
@@ -56,6 +70,13 @@
 	"content": "This section has information about the course structure and where you can go to get help. "
 },
 {
+	"uri": "http://mwidener.github.io/lecture4/lec4_3/",
+	"title": "JS, MapBox, &amp; Maps",
+	"tags": [],
+	"description": "",
+	"content": "Recap  We’ve learned about  The history of web maps Common data structures Raster and vector tiles How to upload data \u0026amp; create tiles in Mapbox How to stylize tiles in Mapbox    We could make our maps manually, but\u0026hellip;  Time consuming Hard to automatically updates Limited features available to us  A programming interface will allow for faster updates and more advanced features.  We can also customize our projects way more than we could manually We can also integrate interaction, loops, conditionals, etc.  We'll use JavaScript.  Supported by all modern web browsers Object oriented Lots of great APIs  Application programming interface   APIs  Essentially a tool box that you access through computer code Pre-written methods/functions that you can call that complete common tasks    "
+},
+{
 	"uri": "http://mwidener.github.io/lecture3/lec3_3/",
 	"title": "GeoJSON polygons",
 	"tags": [],
@@ -84,6 +105,13 @@
 	"content": "Lecture 1 What are web maps?  What is this class about?  Investigating the history of web maps Exploring a range of web mapping tools Exploring a range of development methods Group work developing your own web map  "
 },
 {
+	"uri": "http://mwidener.github.io/lecture4/lec4_4/",
+	"title": "MapBox GL JS",
+	"tags": [],
+	"description": "",
+	"content": " Many different APIs out there.  Leaflet \u0026lt;Google, Bing, Yahoo, etc.\u0026gt; Maps API Mapzen Mapbox JS Mapbox GL JS   We’re going to use Mapbox GL JS  Uses WebGL (web graphics library) 3d/2d graphics in web browsers (desktop/mobile) without plugins.  GPU (graphics processing unit) driven – video game-like graphics  http://eyes.nasa.gov/curiosity/     Open source  maintained by Mapbox: https://github.com/mapbox/mapbox-gl-js      One advantage of using GL/vector tiles vs. raster tiles:  Layers  Mapbox JS and Leaflet have baselayers and overlays  Baselayers: image tiles that make up the basemap, lots of data but not very interactive Overlays: usually vector data like geojson, contain less data but more interactive   Mapbox GL JS sends data to the client, along with certain rules saying how to visualize it – NO DISTINCTION    "
+},
+{
 	"uri": "http://mwidener.github.io/lecture3/lec3_4/",
 	"title": "Limits of GeoJSON",
 	"tags": [],
@@ -103,6 +131,13 @@
 	"tags": [],
 	"description": "",
 	"content": "What are web maps? Web maps are just maps on the internet. They can be static or interactive \u0026hellip; but nowadays they're mostly interactive.\nEasy way to diffuse spatial information and provide interactivity.\nWeb maps help move geographic information systems and sciences to the world wide web.\nWeb mapping consists of three major components:  geography information the Web  In this class we're moving in a different direction than many of your previous GIS courses. How can we use the web to make mapping useful in new and different ways?\n"
+},
+{
+	"uri": "http://mwidener.github.io/lecture4/lec4_5/",
+	"title": "My 1st MapBox Map",
+	"tags": [],
+	"description": "",
+	"content": "To make our map we'll need at least some HTML code and JavaScript code. We could do it all in one file, but for organizational reasons, we'll create an HTML file and another file for our JavaScript.\nSetting up your html file. The below code has the basics that we'll need to set up our map.\n\u0026lt;!DOCTYPE html\u0026gt; \u0026lt;html\u0026gt; \u0026lt;head\u0026gt; \u0026lt;meta charset=utf-8 /\u0026gt; \u0026lt;title\u0026gt;TITLE HERE – shows up in browser tab\u0026lt;/title\u0026gt; \u0026lt;meta name=\u0026#39;viewport\u0026#39; content=\u0026#39;initial-scale=1,maximum-scale=1,user-scalable=no\u0026#39; /\u0026gt; \u0026lt;!--Adjusts the screen width to the device accessing the web map --\u0026gt; \u0026lt;script src=\u0026#34;https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;!--Sets up Mapbox GL JS --\u0026gt; \u0026lt;link href=\u0026#34;https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css\u0026#34; rel=\u0026#34;stylesheet\u0026#34; /\u0026gt; \u0026lt;!--Sets up Mapbox GL JS --\u0026gt; \u0026lt;!--below -in file CSS browser set up --\u0026gt; \u0026lt;style\u0026gt; body { margin:0; padding:0; } .map { position:absolute; top:0; bottom:0; width:100%; } \u0026lt;/style\u0026gt; \u0026lt;/head\u0026gt; \u0026lt;body\u0026gt; \u0026lt;!--where we put our javascript code --\u0026gt; \u0026lt;div id=\u0026#39;map\u0026#39; class=\u0026#39;map\u0026#39;\u0026gt; \u0026lt;/div\u0026gt; \u0026lt;!--browser set up --\u0026gt; \u0026lt;script src=\u0026#39;./MYJAVASCRIPTCODE.js\u0026#39;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;!--\u0026#34;./\u0026#34; means current directory, so if you put your code elsewhere use that path --\u0026gt; \u0026lt;/body\u0026gt; \u0026lt;/html\u0026gt; Setting up your JavaScript file. mapboxgl.accessToken = \u0026#39;\u0026lt;YOUR ACCESS TOKEN HERE\u0026gt;\u0026#39;; var map = new mapboxgl.Map({ container: \u0026#39;map\u0026#39;, //container id in HTML  style: \u0026#39;mapbox://styles/mapbox/streets-v8\u0026#39;, //stylesheet location  center: [-96.7, 60.00], // starting point, longitude/latitude  zoom: 3 // starting zoom level }); Let's try this for real\u0026hellip;  Create HTML/JS code to create a map and then post it on your website.  Create a new style and use that path for your new map.    "
 },
 {
 	"uri": "http://mwidener.github.io/lecture3/",
@@ -138,6 +173,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Prof. Michael Widener email michael michael DOT widener AT utoronto DOT ca\noffice hours: Thursdays 1pm - 3pm Sid Smith Hall 5037\nAdditional resources  Mapbox GL JS API Mapbox GL JS Examples  "
+},
+{
+	"uri": "http://mwidener.github.io/lecture4/",
+	"title": "Lecture 4: Mapbox Intro",
+	"tags": [],
+	"description": "",
+	"content": "Introducing Mapbox In this lecture we're going to dive into Mapbox Studio, and then begin to explore the javascript code needed to build our first Mapbox map with an API.\nGo ahead an log in to MapBox and we'll get started\u0026hellip;\n"
 },
 {
 	"uri": "http://mwidener.github.io/lecture3/lec3_6/",
