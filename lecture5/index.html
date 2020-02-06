@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>GeoJSON geometries :: GGR472 Winter 2020</title>
+    <title>Lecture 5: Adding Data/Making Maps :: GGR472 Winter 2020</title>
 
     
     <link href="/css/nucleus.css?1581001919" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/lecture3/lec3_2/">
+  <body class="" data-url="/lecture5/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -533,7 +533,7 @@
   
     
     <li data-nav-id="/lecture3/" title="Lecture 3: Data/Viz" class="dd-item 
-        parent
+        
         
         
         ">
@@ -588,8 +588,8 @@
   
     
     <li data-nav-id="/lecture3/lec3_2/" title="GeoJSON geometries" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/lecture3/lec3_2/">
@@ -995,8 +995,8 @@
   
     
     <li data-nav-id="/lecture5/" title="Lecture 5: Adding Data/Making Maps" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/lecture5/">
@@ -1208,13 +1208,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/'>Home</a> > <a href='/lecture3/'>Lecture 3: Data/Viz</a> > GeoJSON geometries
-          
-         
+            <a href='/'>Home</a> > Lecture 5: Adding Data/Making Maps
           
          
           
@@ -1240,33 +1234,9 @@
 
 
 
-	<h4 id="geometries-in-geojson-are-similar-to-the-other-online-formats-weve-explored">Geometries in geojson are similar to the other online formats we've explored.</h4>
-<ul>
-<li>Point = Point</li>
-<li>Line/polyline = LineString</li>
-<li>Polygon = Polygon</li>
-</ul>
-<p><img src="geojson_geometry.png" alt="geometry primitives"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{ <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Point&#34;</span>,
-	<span style="color:#e6db74">&#34;coordinates&#34;</span><span style="color:#f92672">:</span> [<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">10</span>]
-}
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{ <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;LineString&#34;</span>,
-	<span style="color:#e6db74">&#34;coordinates&#34;</span><span style="color:#f92672">:</span> [
-			[<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">10</span>], [<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">30</span>],[<span style="color:#ae81ff">40</span>,<span style="color:#ae81ff">40</span>]
-		]
-}
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{ <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Polygon&#34;</span>,
-	<span style="color:#e6db74">&#34;coordinates&#34;</span><span style="color:#f92672">:</span> [
-			[<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">10</span>], [<span style="color:#ae81ff">40</span>,<span style="color:#ae81ff">40</span>], [<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">40</span>], [<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">20</span>],[<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">10</span>]
-		]
-}
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{ <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Polygon&#34;</span>,
-	<span style="color:#e6db74">&#34;coordinates&#34;</span><span style="color:#f92672">:</span> [
-			[[<span style="color:#ae81ff">35</span>,<span style="color:#ae81ff">10</span>], [<span style="color:#ae81ff">45</span>,<span style="color:#ae81ff">45</span>], [<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">40</span>], [<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">20</span>],[<span style="color:#ae81ff">35</span>,<span style="color:#ae81ff">10</span>]],
-			[[<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">30</span>], [<span style="color:#ae81ff">35</span>,<span style="color:#ae81ff">35</span>], [<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">20</span>], [<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">30</span>]]
-		]
-}
-</code></pre></div>
+	<h1 id="adding-data-and-making-maps">Adding Data and Making Maps</h1>
+<p>In this lecture we're going to go over how data can be added to our web maps using javascript.</p>
+
 
 
 
@@ -1539,7 +1509,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1554,9 +1523,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1574,7 +1540,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1590,9 +1555,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1823,6 +1785,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1837,6 +1800,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1925,10 +1891,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/lecture3/lec3_1/" title="GeoJSON components"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/lecture4/lec4_5/" title="My 1st MapBox Map"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/lecture3/lec3_3/" title="GeoJSON polygons" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/lecture5/lec5_1/" title="Adding Data" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

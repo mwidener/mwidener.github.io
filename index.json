@@ -1,5 +1,12 @@
 [
 {
+	"uri": "http://mwidener.github.io/lecture5/lec5_1/",
+	"title": "Adding Data",
+	"tags": [],
+	"description": "",
+	"content": "It's easy to add data from a range of sources to your mapbox map.  Vector (from your data page on mapbox) Raster (from your data page on mapbox) GeoJSON from your server/another website Images/Videos  Must use asynchronous call. This is a way to keep code from running until some event occurs. map.on(\u0026#39;load\u0026#39;, function(){ // DO STUFF HERE }); In the \u0026lsquo;DO STUFF HERE\u0026rsquo; area we want to do two things.\n Add the data source - where are we pulling data from to put in our site? Draw the data.  How do we do this? Let's look at the API to see what the addSource() and addLayer() methods do!\nhttps://www.mapbox.com/mapbox-gl-js/api/\n"
+},
+{
 	"uri": "http://mwidener.github.io/lecture4/lec4_1/",
 	"title": "MapBox Studio",
 	"tags": [],
@@ -33,6 +40,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Welcome to Developing Web Maps! Welcome to GGR 472: Developing Web Maps - Winter 2020. In this class we will explore how web maps are designed and created, using the MapBox GL JS API.\nCourse Overview  what web maps are good for, and what they're less good for, what kinds of spatial data they use, how design considerations change for viewing spatial data online numerous interactive features, and how to do basic GIS online.  A note on coding: Don't be this guy: "
+},
+{
+	"uri": "http://mwidener.github.io/lecture5/lec5_2/",
+	"title": "Adding GeoJSON data",
+	"tags": [],
+	"description": "",
+	"content": "To add GeoJSON data we would use the following code, if we want to manually add GeoJSON code:\nmap.addSource(\u0026#39;my-data\u0026#39;, { \u0026#34;type\u0026#34;: \u0026#34;geojson\u0026#34;, \u0026#34;data\u0026#34;: { \u0026#34;type\u0026#34;: \u0026#34;Feature\u0026#34;, \u0026#34;geometry\u0026#34;: { \u0026#34;type\u0026#34;: \u0026#34;Point\u0026#34;, \u0026#34;coordinates\u0026#34;: [-77.0323, 38.9131] }, \u0026#34;properties\u0026#34;: { \u0026#34;title\u0026#34;: \u0026#34;Mapbox DC\u0026#34;, \u0026#34;marker-symbol\u0026#34;: \u0026#34;monument\u0026#34; } } }); OR we can point to a .geojson file:\nmap.addSource(\u0026#39;my-data\u0026#39;, { \u0026#34;type\u0026#34;: \u0026#34;geojson\u0026#34;, \u0026#34;data\u0026#34;: \u0026#34;./mygeojsonfile.geojson\u0026#34; }); In both examples above, the \u0026ldquo;my-data\u0026rdquo; label is what we call the \u0026ldquo;source ID\u0026rdquo;. This is how we will access/refer these data inside the rest of our javascript code.\nHow are our files organized on our server?\n"
 },
 {
 	"uri": "http://mwidener.github.io/lecture4/lec4_2/",
@@ -70,6 +84,13 @@
 	"content": "This section has information about the course structure and where you can go to get help. "
 },
 {
+	"uri": "http://mwidener.github.io/lecture5/lec5_3/",
+	"title": "Adding Vector Data",
+	"tags": [],
+	"description": "",
+	"content": "If we want to add data from the Dataset section of our mapbox portal, we can make a direct reference to those data using the addSource() method.\nmap.addSource(\u0026#39;my_data\u0026#39;,{ \u0026#34;type\u0026#34;: \u0026#34;vector\u0026#34;, \u0026#34;url\u0026#34;: \u0026#34;mapbox://mwidener.3259jdk2\u0026#34; //link to data from mapbox site }) "
+},
+{
 	"uri": "http://mwidener.github.io/lecture4/lec4_3/",
 	"title": "JS, MapBox, &amp; Maps",
 	"tags": [],
@@ -105,6 +126,13 @@
 	"content": "Lecture 1 What are web maps?  What is this class about?  Investigating the history of web maps Exploring a range of web mapping tools Exploring a range of development methods Group work developing your own web map  "
 },
 {
+	"uri": "http://mwidener.github.io/lecture5/lec5_4/",
+	"title": "Adding Layers",
+	"tags": [],
+	"description": "",
+	"content": "OK, so now we've added data, but the data are not yet displayed in the map. We have to tell mapbox how we want these data to be presented.\nTo do this we use the addLayer() method.\nhttps://docs.mapbox.com/mapbox-gl-js/style-spec/layers/\nFor geojson: map.addLayer({ \u0026#39;id\u0026#39;: \u0026#39;a_layer_name_as_string\u0026#39;, \u0026#39;type\u0026#39;: \u0026#39;fill\u0026#39;, //this can be fill for polygon, line for lines, or circle for points \u0026#39;source\u0026#39;: \u0026#39;the_source_ID_from_addSource()\u0026#39;, \u0026#39;layout\u0026#39;: {}, \u0026#39;paint\u0026#39;: { //a bunch of parameters that allow you to customize the display  \u0026#39;fill-color\u0026#39;: \u0026#39;#f08\u0026#39;, \u0026#39;fill-opacity\u0026#39;: 0.4 } }); For vector: map.addLayer({ \u0026#39;id\u0026#39;: \u0026#39;a_layer_name_as_string\u0026#39;, \u0026#39;type\u0026#39;: \u0026#39;fill\u0026#39;, //this can be fill for polygon, line for lines, or circle for points \u0026#39;source\u0026#39;: \u0026#39;the_source_ID_from_addSource()\u0026#39;, \u0026#39;layout\u0026#39;: {}, \u0026#39;paint\u0026#39;: { //a bunch of parameters that allow you to customize the display  \u0026#39;fill-color\u0026#39;: \u0026#39;#f08\u0026#39;, \u0026#39;fill-opacity\u0026#39;: 0.4 }, \u0026#34;source-layer\u0026#34;: \u0026#34;some_layer_label_from_mapbox_data_page\u0026#34; }); Refer to the above documentation link for which paint options you can use for different types of geometries.\n"
+},
+{
 	"uri": "http://mwidener.github.io/lecture4/lec4_4/",
 	"title": "MapBox GL JS",
 	"tags": [],
@@ -131,6 +159,13 @@
 	"tags": [],
 	"description": "",
 	"content": "What are web maps? Web maps are just maps on the internet. They can be static or interactive \u0026hellip; but nowadays they're mostly interactive.\nEasy way to diffuse spatial information and provide interactivity.\nWeb maps help move geographic information systems and sciences to the world wide web.\nWeb mapping consists of three major components:  geography information the Web  In this class we're moving in a different direction than many of your previous GIS courses. How can we use the web to make mapping useful in new and different ways?\n"
+},
+{
+	"uri": "http://mwidener.github.io/lecture5/lec5_5/",
+	"title": "Bringing it all together",
+	"tags": [],
+	"description": "",
+	"content": "Using the supermarket geojson data from last week\u0026hellip;\nexample with both vector tiles and geojson: mapboxgl.accessToken = \u0026#39;pk.eyJ1IjoibXdpZGVuZXIiLCJhIjoibXBKQU85dyJ9.Q6yf1zk7wpnYqpsQfRwVmw\u0026#39;; var map = new mapboxgl.Map({ container: \u0026#39;map\u0026#39;, //container id in HTML  style: \u0026#39;mapbox://styles/mwidener/cikgx8tbm003tapm5o1zquc9m\u0026#39;, //stylesheet location  center: [-79.39, 43.72], // starting point, longitude/latitude  zoom: 10 // starting zoom level }); map.on(\u0026#39;load\u0026#39;, function(){ //ADDING A SOURCE FROM A MAPBOX TILESET - DATA YOU UPLOADED TO MAPBOX STUDIO  map.addSource(\u0026#39;supermarket_data_vector\u0026#39;,{ \u0026#39;type\u0026#39;: \u0026#39;vector\u0026#39;, \u0026#39;url\u0026#39;: \u0026#39;mapbox://mwidener.ck629gt2v0bkm2jmqhtcc41uw-0zmtf\u0026#39; }); map.addLayer({ \u0026#39;id\u0026#39;:\u0026#39;supermarket_vector_layer\u0026#39;, \u0026#39;type\u0026#39;: \u0026#39;circle\u0026#39;, \u0026#39;source\u0026#39;: \u0026#39;supermarket_data_vector\u0026#39;, \u0026#39;layout\u0026#39;: {}, \u0026#39;paint\u0026#39;: { \u0026#39;circle-color\u0026#39;: \u0026#39;red\u0026#39;, \u0026#39;circle-radius\u0026#39;: 10 }, \u0026#39;source-layer\u0026#39;: \u0026#39;supermarkets\u0026#39; //get this from mapbox tileset page  }); //ADDING A GEOJSON SOURCE EXAMPLE  map.addSource(\u0026#39;supermarkets_data\u0026#39;,{ \u0026#39;type\u0026#39;: \u0026#39;geojson\u0026#39;, \u0026#39;data\u0026#39;: \u0026#39;./supermarkets.geojson\u0026#39; }); map.addLayer({ \u0026#39;id\u0026#39;: \u0026#39;supermarkets_layer\u0026#39;, \u0026#39;type\u0026#39;: \u0026#39;circle\u0026#39;, \u0026#39;source\u0026#39;: \u0026#39;supermarkets_data\u0026#39;, \u0026#39;layout\u0026#39;: {}, \u0026#39;paint\u0026#39;: { \u0026#39;circle-color\u0026#39;: \u0026#39;blue\u0026#39;, \u0026#39;circle-radius\u0026#39;: 15 } }, \u0026#39;supermarket_vector_layer\u0026#39;); // puts this layer behind the \u0026#39;supermarket_vector_layer\u0026#39; on the map }); "
 },
 {
 	"uri": "http://mwidener.github.io/lecture4/lec4_5/",
@@ -194,6 +229,13 @@
 	"tags": [],
 	"description": "",
 	"content": "GML GML defines a variety of object types:\n Features Coordinate reference systems Geometry (simple and complex) Topology Time Units of Measure Generalized values  GML geometries:\n Point LineString Polygon Newer versions of GML have the ability to represent coverages/raster  \u0026lt;gml:Polygon\u0026gt; \u0026lt;gml:outerBoundaryIs\u0026gt; \u0026lt;gml:LinearRing\u0026gt; \u0026lt;gml:coordinates\u0026gt;0,0 100,0 100,100 0,100 0,0\u0026lt;/gml:coordinates\u0026gt; \u0026lt;/gml:LinearRing\u0026gt; \u0026lt;/gml:outerBoundaryIs\u0026gt; \u0026lt;/gml:Polygon\u0026gt; \u0026lt;gml:Point\u0026gt; \u0026lt;gml:coordinates\u0026gt;100,200\u0026lt;/gml:coordinates\u0026gt; \u0026lt;/gml:Point\u0026gt; \u0026lt;gml:LineString\u0026gt; \u0026lt;gml:coordinates\u0026gt;100,200 150,300\u0026lt;/gml:coordinates\u0026gt; \u0026lt;/gml:LineString\u0026gt; KML KML extends GML and maintains an open standard: OpenGIS KML Encoding Standard\nFour basic ways to display data:  Placemarks Polylines Polygons Overlays  Difference between polylines and polygons is the first and last point is the same for polygons.\nExamples of how KML can be used here.\nOSM XML OpenStreetMap XML is tag based, but not standardized in practice. It's based on XML, with different tags than GML/KML.\nGeometries:\n Node Way Closed way  \u0026lt;node id=\u0026#34;60006651\u0026#34; visible=\u0026#34;true\u0026#34; version=\u0026#34;8\u0026#34; changeset=\u0026#34;14929023\u0026#34; timestamp=\u0026#34;2013-02-06T02:06:38Z\u0026#34; user=\u0026#34;andrewpmk\u0026#34; uid=\u0026#34;1679\u0026#34; lat=\u0026#34;43.6629666\u0026#34; lon=\u0026#34;-79.3974730\u0026#34;/\u0026gt; \u0026lt;way id=\u0026#34;8027962\u0026#34; visible=\u0026#34;true\u0026#34; version=\u0026#34;13\u0026#34; changeset=\u0026#34;29433309\u0026#34; timestamp=\u0026#34;2015-03-12T19:30:13Z\u0026#34; user=\u0026#34;andrewpmk\u0026#34; uid=\u0026#34;1679\u0026#34;\u0026gt; \u0026lt;nd ref=\u0026#34;60006651\u0026#34;/\u0026gt; \u0026lt;nd ref=\u0026#34;2143468180\u0026#34;/\u0026gt; \u0026lt;nd ref=\u0026#34;60006652\u0026#34;/\u0026gt; \u0026lt;nd ref=\u0026#34;60006653\u0026#34;/\u0026gt; \u0026lt;nd ref=\u0026#34;60006655\u0026#34;/\u0026gt; \u0026lt;nd ref=\u0026#34;60006647\u0026#34;/\u0026gt; \u0026lt;nd ref=\u0026#34;60006648\u0026#34;/\u0026gt; \u0026lt;nd ref=\u0026#34;60006649\u0026#34;/\u0026gt; \u0026lt;nd ref=\u0026#34;60006650\u0026#34;/\u0026gt; \u0026lt;nd ref=\u0026#34;60006651\u0026#34;/\u0026gt; \u0026lt;tag k=\u0026#34;addr:city\u0026#34; v=\u0026#34;Toronto\u0026#34;/\u0026gt; \u0026lt;tag k=\u0026#34;addr:country\u0026#34; v=\u0026#34;CA\u0026#34;/\u0026gt; \u0026lt;tag k=\u0026#34;addr:housenumber\u0026#34; v=\u0026#34;73-75\u0026#34;/\u0026gt; \u0026lt;tag k=\u0026#34;addr:province\u0026#34; v=\u0026#34;ON\u0026#34;/\u0026gt; \u0026lt;tag k=\u0026#34;addr:street\u0026#34; v=\u0026#34;St. George Street\u0026#34;/\u0026gt; \u0026lt;tag k=\u0026#34;building\u0026#34; v=\u0026#34;university\u0026#34;/\u0026gt; \u0026lt;tag k=\u0026#34;college\u0026#34; v=\u0026#34;University College\u0026#34;/\u0026gt; \u0026lt;tag k=\u0026#34;name\u0026#34; v=\u0026#34;Sir Daniel Wilson Residence (University College)\u0026#34;/\u0026gt; \u0026lt;tag k=\u0026#34;operator\u0026#34; v=\u0026#34;University of Toronto\u0026#34;/\u0026gt; \u0026lt;/way\u0026gt; Go to OpenStreetMap and download some data. Inspect nodes/ways/closed ways. "
+},
+{
+	"uri": "http://mwidener.github.io/lecture5/",
+	"title": "Lecture 5: Adding Data/Making Maps",
+	"tags": [],
+	"description": "",
+	"content": "Adding Data and Making Maps In this lecture we're going to go over how data can be added to our web maps using javascript.\n"
 },
 {
 	"uri": "http://mwidener.github.io/lecture3/lec3_7/",
