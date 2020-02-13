@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.62.2" />
+    <meta name="generator" content="Hugo 0.59.1" />
     <meta name="description" content="Course site for University of Toronto GGR 472 Developing Web Maps">
 <meta name="author" content="Michael Widener">
 
@@ -12,20 +12,20 @@
     <title>GeoJSON polygons :: GGR472 Winter 2020</title>
 
     
-    <link href="/css/nucleus.css?1581001919" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1581001919" rel="stylesheet">
-    <link href="/css/hybrid.css?1581001919" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1581001919" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1581001919" rel="stylesheet">
-    <link href="/css/auto-complete.css?1581001919" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1581001919" rel="stylesheet">
-    <link href="/css/theme.css?1581001919" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1581001919" rel="stylesheet">
+    <link href="/css/nucleus.css?1581633575" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1581633575" rel="stylesheet">
+    <link href="/css/hybrid.css?1581633575" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1581633575" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1581633575" rel="stylesheet">
+    <link href="/css/auto-complete.css?1581633575" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1581633575" rel="stylesheet">
+    <link href="/css/theme.css?1581633575" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1581633575" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1581001919" rel="stylesheet">
+      <link href="/css/theme-blue.css?1581633575" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1581001919"></script>
+    <script src="/js/jquery-3.3.1.min.js?1581633575"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -131,14 +131,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1581001919"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1581001919"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1581633575"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1581633575"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/mwidener.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1581001919"></script>
+<script type="text/javascript" src="/js/search.js?1581633575"></script>
 
     
   </div>
@@ -1154,6 +1154,146 @@
  
 
           
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/lecture6/" title="Filters and Mouse Events" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/lecture6/">
+          <b>6. </b>Filters and Mouse Events
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/lecture6/lec6_1/" title="Filters" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/lecture6/lec6_1/">
+          Filters
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/lecture6/lec6_2/" title="Events" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/lecture6/lec6_2/">
+          Events
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/lecture6/lec6_3/" title="Mouse Move Event Example" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/lecture6/lec6_3/">
+          Mouse Move Event Example
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/lecture6/lec6_4/" title="Mouse click event example" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/lecture6/lec6_4/">
+          Mouse click event example
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
          
     </ul>
 
@@ -1240,42 +1380,56 @@
 
 
 
-	<h4 id="polygons-can-be-quite-complicated">Polygons can be quite complicated.</h4>
+	
+
+<h4 id="polygons-can-be-quite-complicated">Polygons can be quite complicated.</h4>
+
 <h4 id="geojson-allows-for-an-easy-way-to-describe-polygons-with-multiple-interior-gaps">GeoJSON allows for an easy way to describe polygons with (multiple) interior gaps.</h4>
+
 <ul>
 <li>Polgyon
+
 <ul>
 <li>LinearRing (exterior)
+
 <ul>
 <li>Positions</li>
-</ul>
-</li>
+</ul></li>
 <li>LinearRing (interior)
+
 <ul>
 <li>Positions</li>
-</ul>
-</li>
+</ul></li>
 <li>LinearRing (interior)
+
 <ul>
 <li>Positions</li>
+</ul></li>
+</ul></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
+
 <h4 id="only-1-exterior-ring-and-then-as-many-interior-rings-as-needed">Only 1 exterior ring and then as many interior rings as needed</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{ <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Polygon&#34;</span>,
-	<span style="color:#e6db74">&#34;coordinates&#34;</span><span style="color:#f92672">:</span> [
-			[[<span style="color:#ae81ff">35</span>,<span style="color:#ae81ff">10</span>], [<span style="color:#ae81ff">45</span>,<span style="color:#ae81ff">45</span>], [<span style="color:#ae81ff">15</span>,<span style="color:#ae81ff">40</span>], [<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">20</span>],[<span style="color:#ae81ff">35</span>,<span style="color:#ae81ff">10</span>]],
-			[[<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">30</span>], [<span style="color:#ae81ff">35</span>,<span style="color:#ae81ff">35</span>], [<span style="color:#ae81ff">30</span>,<span style="color:#ae81ff">20</span>], [<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">30</span>]]
+
+<pre><code class="language-javascript">{ &quot;type&quot;: &quot;Polygon&quot;,
+	&quot;coordinates&quot;: [
+			[[35,10], [45,45], [15,40], [10,20],[35,10]],
+			[[20,30], [35,35], [30,20], [20,30]]
 		]
 }
-</code></pre></div><h4 id="care-also-should-be-taken-with-coordinate-ordering-in-geojson-polygons">Care also should be taken with coordinate ordering in GeoJSON Polygons</h4>
+</code></pre>
+
+<h4 id="care-also-should-be-taken-with-coordinate-ordering-in-geojson-polygons">Care also should be taken with coordinate ordering in GeoJSON Polygons</h4>
+
 <h5 id="the-exterior-ring-should-be-counterclockwise">The exterior ring should be counterclockwise</h5>
+
 <h5 id="interior-rings-should-be-clockwise">Interior rings should be clockwise</h5>
+
 <h4 id="why-does-this-matter">Why does this matter?</h4>
-<h5 id="the-classic-chamberlain--duquette-algorithm-for-calculating-the-area-of-a-polygon-on-a-sphere-has-the-nice-property-that-counterclockwise-wound-polygons-have-positive-area-and-clockwise-yield-negative-if-you-ensure-winding-order-calculating-the-area-of-a-polygon-with-holes-is-as-simple-as-adding-the-areas-of-all-rings">The classic Chamberlain &amp; Duquette algorithm for calculating the area of a polygon on a sphere has the nice property that <em>counterclockwise-wound polygons have positive area and clockwise yield negative.</em> If you ensure winding order, calculating the area of a polygon with holes is as simple as adding the areas of all rings.</h5>
+
+<h5 id="the-classic-chamberlain-duquette-algorithm-for-calculating-the-area-of-a-polygon-on-a-sphere-has-the-nice-property-that-counterclockwise-wound-polygons-have-positive-area-and-clockwise-yield-negative-if-you-ensure-winding-order-calculating-the-area-of-a-polygon-with-holes-is-as-simple-as-adding-the-areas-of-all-rings">The classic Chamberlain &amp; Duquette algorithm for calculating the area of a polygon on a sphere has the nice property that <em>counterclockwise-wound polygons have positive area and clockwise yield negative.</em> If you ensure winding order, calculating the area of a polygon with holes is as simple as adding the areas of all rings.</h5>
+
 <h5 id="winding-order-also-has-a-default-meaning-in-canvas-and-other-drawing-apis-drawing-a-path-with-counterclockwise-order-within-one-with-clockwise-order-will-cut-it-out-of-the-filled-image">Winding order also has a default meaning in Canvas and other drawing APIs: <em>drawing a path with counterclockwise order within one with clockwise order will cut it out of the filled image.</em></h5>
+
 <p><a href="http://www.macwright.org/2015/03/23/geojson-second-bite.html">source: More than you ever wanted to know about geojson</a></p>
 
 
@@ -1927,6 +2081,88 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
             
         
         
@@ -1949,19 +2185,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1581001919"></script>
-    <script src="/js/perfect-scrollbar.min.js?1581001919"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1581001919"></script>
-    <script src="/js/jquery.sticky.js?1581001919"></script>
-    <script src="/js/featherlight.min.js?1581001919"></script>
-    <script src="/js/highlight.pack.js?1581001919"></script>
+    <script src="/js/clipboard.min.js?1581633575"></script>
+    <script src="/js/perfect-scrollbar.min.js?1581633575"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1581633575"></script>
+    <script src="/js/jquery.sticky.js?1581633575"></script>
+    <script src="/js/featherlight.min.js?1581633575"></script>
+    <script src="/js/highlight.pack.js?1581633575"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1581001919"></script>
-    <script src="/js/learn.js?1581001919"></script>
-    <script src="/js/hugo-learn.js?1581001919"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1581633575"></script>
+    <script src="/js/learn.js?1581633575"></script>
+    <script src="/js/hugo-learn.js?1581633575"></script>
 
-    <link href="/mermaid/mermaid.css?1581001919" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1581001919"></script>
+    <link href="/mermaid/mermaid.css?1581633575" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1581633575"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

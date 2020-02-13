@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.62.2" />
+    <meta name="generator" content="Hugo 0.59.1" />
     <meta name="description" content="Course site for University of Toronto GGR 472 Developing Web Maps">
 <meta name="author" content="Michael Widener">
 
@@ -12,20 +12,20 @@
     <title>Adding Layers :: GGR472 Winter 2020</title>
 
     
-    <link href="/css/nucleus.css?1581001919" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1581001919" rel="stylesheet">
-    <link href="/css/hybrid.css?1581001919" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1581001919" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1581001919" rel="stylesheet">
-    <link href="/css/auto-complete.css?1581001919" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1581001919" rel="stylesheet">
-    <link href="/css/theme.css?1581001919" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1581001919" rel="stylesheet">
+    <link href="/css/nucleus.css?1581633575" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1581633575" rel="stylesheet">
+    <link href="/css/hybrid.css?1581633575" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1581633575" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1581633575" rel="stylesheet">
+    <link href="/css/auto-complete.css?1581633575" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1581633575" rel="stylesheet">
+    <link href="/css/theme.css?1581633575" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1581633575" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1581001919" rel="stylesheet">
+      <link href="/css/theme-blue.css?1581633575" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1581001919"></script>
+    <script src="/js/jquery-3.3.1.min.js?1581633575"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -131,14 +131,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1581001919"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1581001919"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1581633575"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1581633575"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/mwidener.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1581001919"></script>
+<script type="text/javascript" src="/js/search.js?1581633575"></script>
 
     
   </div>
@@ -1154,6 +1154,146 @@
  
 
           
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/lecture6/" title="Filters and Mouse Events" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/lecture6/">
+          <b>6. </b>Filters and Mouse Events
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/lecture6/lec6_1/" title="Filters" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/lecture6/lec6_1/">
+          Filters
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/lecture6/lec6_2/" title="Events" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/lecture6/lec6_2/">
+          Events
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/lecture6/lec6_3/" title="Mouse Move Event Example" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/lecture6/lec6_3/">
+          Mouse Move Event Example
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/lecture6/lec6_4/" title="Mouse click event example" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/lecture6/lec6_4/">
+          Mouse click event example
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
          
     </ul>
 
@@ -1228,14 +1368,16 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#for-geojson">For geojson:</a></li>
-        <li><a href="#for-vector">For vector:</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#for-geojson">For geojson:</a></li>
+<li><a href="#for-vector">For vector:</a></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
     </div>
 </div>
@@ -1261,33 +1403,44 @@
 
 
 
-	<p>OK, so now we've added data, but the data are not yet displayed in the map. We have to tell mapbox how we want these data to be presented.</p>
+	
+
+<p>OK, so now we&rsquo;ve added data, but the data are not yet displayed in the map. We have to tell mapbox how we want these data to be presented.</p>
+
 <p>To do this we use the addLayer() method.</p>
+
 <p><a href="https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/">https://docs.mapbox.com/mapbox-gl-js/style-spec/layers/</a></p>
+
 <h3 id="for-geojson">For geojson:</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">map</span>.<span style="color:#a6e22e">addLayer</span>({
-<span style="color:#e6db74">&#39;id&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;a_layer_name_as_string&#39;</span>,
-<span style="color:#e6db74">&#39;type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;fill&#39;</span>, <span style="color:#75715e">//this can be fill for polygon, line for lines, or circle for points
-</span><span style="color:#75715e"></span><span style="color:#e6db74">&#39;source&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;the_source_ID_from_addSource()&#39;</span>,
-<span style="color:#e6db74">&#39;layout&#39;</span><span style="color:#f92672">:</span> {},
-<span style="color:#e6db74">&#39;paint&#39;</span><span style="color:#f92672">:</span> {    <span style="color:#75715e">//a bunch of parameters that allow you to customize the display
-</span><span style="color:#75715e"></span>  <span style="color:#e6db74">&#39;fill-color&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#f08&#39;</span>,
-  <span style="color:#e6db74">&#39;fill-opacity&#39;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.4</span>
+
+<pre><code class="language-javascript">map.addLayer({
+'id': 'a_layer_name_as_string',
+'type': 'fill', //this can be fill for polygon, line for lines, or circle for points
+'source': 'the_source_ID_from_addSource()',
+'layout': {},
+'paint': {    //a bunch of parameters that allow you to customize the display
+  'fill-color': '#f08',
+  'fill-opacity': 0.4
   }
 });
-</code></pre></div><h3 id="for-vector">For vector:</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">map</span>.<span style="color:#a6e22e">addLayer</span>({
-<span style="color:#e6db74">&#39;id&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;a_layer_name_as_string&#39;</span>,
-<span style="color:#e6db74">&#39;type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;fill&#39;</span>, <span style="color:#75715e">//this can be fill for polygon, line for lines, or circle for points
-</span><span style="color:#75715e"></span><span style="color:#e6db74">&#39;source&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;the_source_ID_from_addSource()&#39;</span>,
-<span style="color:#e6db74">&#39;layout&#39;</span><span style="color:#f92672">:</span> {},
-<span style="color:#e6db74">&#39;paint&#39;</span><span style="color:#f92672">:</span> {    <span style="color:#75715e">//a bunch of parameters that allow you to customize the display
-</span><span style="color:#75715e"></span>  <span style="color:#e6db74">&#39;fill-color&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#f08&#39;</span>,
-  <span style="color:#e6db74">&#39;fill-opacity&#39;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.4</span>
+</code></pre>
+
+<h3 id="for-vector">For vector:</h3>
+
+<pre><code class="language-javascript">map.addLayer({
+'id': 'a_layer_name_as_string',
+'type': 'fill', //this can be fill for polygon, line for lines, or circle for points
+'source': 'the_source_ID_from_addSource()',
+'layout': {},
+'paint': {    //a bunch of parameters that allow you to customize the display
+  'fill-color': '#f08',
+  'fill-opacity': 0.4
 },
-<span style="color:#e6db74">&#34;source-layer&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;some_layer_label_from_mapbox_data_page&#34;</span>
+&quot;source-layer&quot;: &quot;some_layer_label_from_mapbox_data_page&quot;
 });
-</code></pre></div><p>Refer to the above documentation link for which paint options you can use for different types of geometries.</p>
+</code></pre>
+
+<p>Refer to the above documentation link for which paint options you can use for different types of geometries.</p>
 
 
 
@@ -1936,6 +2089,88 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
             
         
         
@@ -1958,19 +2193,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1581001919"></script>
-    <script src="/js/perfect-scrollbar.min.js?1581001919"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1581001919"></script>
-    <script src="/js/jquery.sticky.js?1581001919"></script>
-    <script src="/js/featherlight.min.js?1581001919"></script>
-    <script src="/js/highlight.pack.js?1581001919"></script>
+    <script src="/js/clipboard.min.js?1581633575"></script>
+    <script src="/js/perfect-scrollbar.min.js?1581633575"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1581633575"></script>
+    <script src="/js/jquery.sticky.js?1581633575"></script>
+    <script src="/js/featherlight.min.js?1581633575"></script>
+    <script src="/js/highlight.pack.js?1581633575"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1581001919"></script>
-    <script src="/js/learn.js?1581001919"></script>
-    <script src="/js/hugo-learn.js?1581001919"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1581633575"></script>
+    <script src="/js/learn.js?1581633575"></script>
+    <script src="/js/hugo-learn.js?1581633575"></script>
 
-    <link href="/mermaid/mermaid.css?1581001919" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1581001919"></script>
+    <link href="/mermaid/mermaid.css?1581633575" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1581633575"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
