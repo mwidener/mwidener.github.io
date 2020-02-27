@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://mwidener.github.io/lecture7/lec7_1/</loc>
+    <lastmod>2020-02-27T11:12:33-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://mwidener.github.io/lecture6/lec6_1/</loc>
     <lastmod>2020-02-13T15:12:33-05:00</lastmod>
   </url>
@@ -43,6 +48,11 @@
   </url>
   
   <url>
+    <loc>http://mwidener.github.io/lecture7/lec7_2/</loc>
+    <lastmod>2020-02-13T15:12:54-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://mwidener.github.io/lecture5/lec5_2/</loc>
     <lastmod>2020-02-05T09:53:35-05:00</lastmod>
   </url>
@@ -70,6 +80,11 @@
   <url>
     <loc>http://mwidener.github.io/introduction/</loc>
     <lastmod>2019-11-07T14:06:35-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mwidener.github.io/lecture7/lec7_3/</loc>
+    <lastmod>2020-02-27T11:12:58-05:00</lastmod>
   </url>
   
   <url>
@@ -105,6 +120,11 @@
   <url>
     <loc>http://mwidener.github.io/lecture1/</loc>
     <lastmod>2019-11-06T18:06:35-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mwidener.github.io/lecture7/lec7_4/</loc>
+    <lastmod>2020-02-27T11:13:02-05:00</lastmod>
   </url>
   
   <url>
@@ -203,6 +223,11 @@
   </url>
   
   <url>
+    <loc>http://mwidener.github.io/lecture7/</loc>
+    <lastmod>2020-02-13T11:12:49-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://mwidener.github.io/lecture3/lec3_8/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
   </url>
@@ -215,6 +240,11 @@
   <url>
     <loc>http://mwidener.github.io/lecture3/lec3_10/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://mwidener.github.io/lecture7/lec7_3/choropleth_no_legend-2020/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
