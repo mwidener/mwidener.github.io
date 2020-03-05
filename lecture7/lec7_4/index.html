@@ -12,20 +12,20 @@
     <title>Adding a legend... :: GGR472 Winter 2020</title>
 
     
-    <link href="/css/nucleus.css?1582832024" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1582832024" rel="stylesheet">
-    <link href="/css/hybrid.css?1582832024" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1582832024" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1582832024" rel="stylesheet">
-    <link href="/css/auto-complete.css?1582832024" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1582832024" rel="stylesheet">
-    <link href="/css/theme.css?1582832024" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1582832024" rel="stylesheet">
+    <link href="/css/nucleus.css?1583435970" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1583435970" rel="stylesheet">
+    <link href="/css/hybrid.css?1583435970" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1583435970" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1583435970" rel="stylesheet">
+    <link href="/css/auto-complete.css?1583435970" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1583435970" rel="stylesheet">
+    <link href="/css/theme.css?1583435970" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1583435970" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1582832024" rel="stylesheet">
+      <link href="/css/theme-blue.css?1583435970" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1582832024"></script>
+    <script src="/js/jquery-3.3.1.min.js?1583435970"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -131,14 +131,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1582832024"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1582832024"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1583435970"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1583435970"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/mwidener.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1582832024"></script>
+<script type="text/javascript" src="/js/search.js?1583435970"></script>
 
     
   </div>
@@ -1540,7 +1540,8 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#to-be-continued">to be continued</a></li>
+        <li><a href="#lets-add-a-legend-to-our-choropleth-map">Let's add a legend to our choropleth map!</a></li>
+        <li><a href="#how-do-we-add-a-legend">How do we add a legend?</a></li>
       </ul>
     </li>
   </ul>
@@ -1569,8 +1570,118 @@
 
 
 
-	<h3 id="to-be-continued">to be continued</h3>
+	<h3 id="lets-add-a-legend-to-our-choropleth-map">Let's add a legend to our choropleth map!</h3>
+<p>To do this, we'll want to move to our HTML document. In mapbox gl js, our legend is going to be an HTML element layered on top of our map. To achieve this we need to use the <!-- raw HTML omitted --> tag to define a division where the legend will go, and the <!-- raw HTML omitted --> tag to define how the legend will look.</p>
+<p>The <!-- raw HTML omitted --> tag defines a division in the HTML document. Recall, we're already doing this with the following code to create a place for our webmap: <code>&lt;div id='map' class='map'&gt; &lt;/div&gt;</code>.</p>
+<p>In this code we create a division element with an id we call &lsquo;map&rsquo;, and then assign it a class of &lsquo;map&rsquo;, which refers to the styling defined in within the <!-- raw HTML omitted --> tag. We could modify the &ldquo;#map&rdquo; part of the style section in the HTML to mess with how the map is displayed in the window.</p>
+<h3 id="how-do-we-add-a-legend">How do we add a legend?</h3>
+<p>First we want to modify the style tags in our HTML code to add three new style guides:</p>
+<ul>
+<li>.legend</li>
+<li>.legend h4</li>
+<li>.legend div span</li>
+</ul>
+<p>The first addition will dictate how the whole legend division is styled. The second will effect anything that used the <!-- raw HTML omitted --> tag. The third will effect anything in a <!-- raw HTML omitted --> or <!-- raw HTML omitted --> tag. More simply, .legend establishes the style norms for the legend object, .legend h4 establishes style norms for the legend title, and .legend div span will establish norms for the circle objects showing different colors in the legend.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">style</span>&gt;
+<span style="color:#f92672">body</span> { <span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0</span>; }
 
+#map { <span style="color:#66d9ef">position</span>:<span style="color:#66d9ef">absolute</span>; <span style="color:#66d9ef">top</span>:<span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">bottom</span>:<span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>; }
+
+.<span style="color:#a6e22e">legend</span> {
+  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#fff</span>;
+  <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">3</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">bottom</span>: <span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">box-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.1</span>);
+  <span style="color:#66d9ef">font</span>: <span style="color:#ae81ff">32</span><span style="color:#66d9ef">px</span><span style="color:#f92672">/</span><span style="color:#ae81ff">32</span><span style="color:#66d9ef">px</span> <span style="color:#e6db74">&#39;Helvetica Neue&#39;</span>, Arial, Helvetica, <span style="color:#66d9ef">sans-serif</span>;
+  <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
+  <span style="color:#66d9ef">right</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">z-index</span>: <span style="color:#ae81ff">1</span>;
+}
+
+.<span style="color:#a6e22e">legend</span> <span style="color:#f92672">h4</span> {
+  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+}
+
+.<span style="color:#a6e22e">legend</span> <span style="color:#f92672">div</span> <span style="color:#f92672">span</span> {
+  <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>;
+  <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline</span><span style="color:#f92672">-</span><span style="color:#66d9ef">block</span>;
+  <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">margin-right</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>;
+  <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+}
+&lt;/<span style="color:#f92672">style</span>&gt;
+</code></pre></div><p>Next, we need to insert the actual <!-- raw HTML omitted --> tags. Before we just had a <!-- raw HTML omitted --> for the map and then the line pointing the html file to the .js code. Now we insert the following to make a legend:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">body</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;map&#39;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;map&#39;</span>&gt; &lt;/<span style="color:#f92672">div</span>&gt;
+  <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> Legend goes here! </span><span style="color:#75715e">--&gt;</span>
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;legend&#39;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;legend&#39;</span>&gt;
+    &lt;<span style="color:#f92672">h4</span>&gt;Median Income&lt;/<span style="color:#f92672">h4</span>&gt;  <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> Legend title </span><span style="color:#75715e">--&gt;</span>
+    &lt;<span style="color:#f92672">div</span>&gt;&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #edf8fb&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;$0-$30,000/no data&lt;/<span style="color:#f92672">div</span>&gt; <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> a &#39;subdivision showing a colored circle and then text describing it&#39; </span><span style="color:#75715e">--&gt;</span>
+    &lt;<span style="color:#f92672">div</span>&gt;&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #b2e2e2&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;$30,000-$50,000&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span>&gt;&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66c2a4&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;$50,000-$70,000&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span>&gt;&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #2ca25f&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;$70,000-$90,000&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span>&gt;&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #006d2c&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;&gt; $90,000&lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+  <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> Legend ends here </span><span style="color:#75715e">--&gt;</span>
+  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;./choropleth_legend-2020.js&#39;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+</code></pre></div><p>Notice how the colors correspond exactly to the colors we selected when making our choropleth map.</p>
+<p>All together it will look like the below code. Try adjusting the various properties to see how they affect the way the legend looks. Try making the spacing between elements bigger and reducing the size of the text.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-HTML" data-lang="HTML"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">utf-8</span> /&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;Median Income in Toronto&lt;/<span style="color:#f92672">title</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;viewport&#39;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> /&gt;
+  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+  &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> /&gt;
+  &lt;<span style="color:#f92672">style</span>&gt;
+  <span style="color:#f92672">body</span> { <span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0</span>; }
+
+  #map { <span style="color:#66d9ef">position</span>:<span style="color:#66d9ef">absolute</span>; <span style="color:#66d9ef">top</span>:<span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">bottom</span>:<span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>; }
+
+  .<span style="color:#a6e22e">legend</span> {
+    <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#fff</span>;
+    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">3</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">bottom</span>: <span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">box-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> rgba(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.1</span>);
+    <span style="color:#66d9ef">font</span>: <span style="color:#ae81ff">24</span><span style="color:#66d9ef">px</span><span style="color:#f92672">/</span><span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span> <span style="color:#e6db74">&#39;Helvetica Neue&#39;</span>, Arial, Helvetica, <span style="color:#66d9ef">sans-serif</span>;
+    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
+    <span style="color:#66d9ef">right</span>: <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">z-index</span>: <span style="color:#ae81ff">1</span>;
+  }
+
+  .<span style="color:#a6e22e">legend</span> <span style="color:#f92672">h4</span> {
+    <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">10</span><span style="color:#66d9ef">px</span>;
+  }
+
+  .<span style="color:#a6e22e">legend</span> <span style="color:#f92672">div</span> <span style="color:#f92672">span</span> {
+    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">50</span><span style="color:#66d9ef">%</span>;
+    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">inline</span><span style="color:#f92672">-</span><span style="color:#66d9ef">block</span>;
+    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">margin-right</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">px</span>;
+  }
+  &lt;/<span style="color:#f92672">style</span>&gt;
+
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;map&#39;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;map&#39;</span>&gt; &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;legend&#39;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;legend&#39;</span>&gt;
+    &lt;<span style="color:#f92672">h4</span>&gt;Median Income&lt;/<span style="color:#f92672">h4</span>&gt;  <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> Legend title </span><span style="color:#75715e">--&gt;</span>
+    &lt;<span style="color:#f92672">div</span>&gt;&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #edf8fb&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;$0/no data&lt;/<span style="color:#f92672">div</span>&gt; <span style="color:#75715e">&lt;!--</span><span style="color:#75715e"> a &#39;subdivision showing a colored circle and then text describing it&#39; </span><span style="color:#75715e">--&gt;</span>
+    &lt;<span style="color:#f92672">div</span>&gt;&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #b2e2e2&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;$30,000&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span>&gt;&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #66c2a4&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;$50,000&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span>&gt;&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #2ca25f&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;$70,000&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span>&gt;&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;background-color: #006d2c&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;$80,000&lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;./choropleth_legend-2020.js&#39;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+
+</code></pre></div>
 
 
 
@@ -2417,19 +2528,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1582832024"></script>
-    <script src="/js/perfect-scrollbar.min.js?1582832024"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1582832024"></script>
-    <script src="/js/jquery.sticky.js?1582832024"></script>
-    <script src="/js/featherlight.min.js?1582832024"></script>
-    <script src="/js/highlight.pack.js?1582832024"></script>
+    <script src="/js/clipboard.min.js?1583435970"></script>
+    <script src="/js/perfect-scrollbar.min.js?1583435970"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1583435970"></script>
+    <script src="/js/jquery.sticky.js?1583435970"></script>
+    <script src="/js/featherlight.min.js?1583435970"></script>
+    <script src="/js/highlight.pack.js?1583435970"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1582832024"></script>
-    <script src="/js/learn.js?1582832024"></script>
-    <script src="/js/hugo-learn.js?1582832024"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1583435970"></script>
+    <script src="/js/learn.js?1583435970"></script>
+    <script src="/js/hugo-learn.js?1583435970"></script>
 
-    <link href="/mermaid/mermaid.css?1582832024" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1582832024"></script>
+    <link href="/mermaid/mermaid.css?1583435970" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1583435970"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
