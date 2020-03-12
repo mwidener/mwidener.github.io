@@ -1,4 +1,4 @@
-{
+var canadianAirports = {
   "type": "FeatureCollection",
   "features": [
     {
