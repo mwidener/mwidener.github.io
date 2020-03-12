@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on GGR472 Winter 2020</title>
+    <link>http://mwidener.github.io/lecture1/lec1_2/</link>
+    <description>Recent content in Programming on GGR472 Winter 2020</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Jan 2020 15:17:34 -0500</lastBuildDate>
+    
+	<atom:link href="http://mwidener.github.io/lecture1/lec1_2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

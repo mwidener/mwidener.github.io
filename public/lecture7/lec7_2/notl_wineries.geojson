@@ -1,0 +1,380 @@
+{
+  "name": "notl_wineries_small_attributes",
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.0841302739997,
+          43.1958892830005
+        ]
+      },
+      "properties": {
+        "FID": 0,
+        "Wineries": "Caroline Cellars",
+        "Address": "1010 Line 2 Rd",
+        "City_1": "Niagara on the Lake",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.1022259809997,
+          43.1584710820005
+        ]
+      },
+      "properties": {
+        "FID": 1,
+        "Wineries": "Chateau des Charmes",
+        "Address": "1025 York Rd",
+        "City_1": "St. Davids",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.1220034069997,
+          43.1697024880005
+        ]
+      },
+      "properties": {
+        "FID": 2,
+        "Wineries": "Coyote's Run Estate Winery",
+        "Address": "485 Concession 5 Rd",
+        "City_1": "Niagara on the Lake",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.1340225179997,
+          43.2127671330005
+        ]
+      },
+      "properties": {
+        "FID": 3,
+        "Wineries": "Trius Winery at Hillebrand",
+        "Address": "1249 Niagara Stone Rd",
+        "City_1": "Niagara on the Lake",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.0641596069997,
+          43.2117432290005
+        ]
+      },
+      "properties": {
+        "FID": 4,
+        "Wineries": "Inniskillin Wines",
+        "Address": "1499 Line 3 Niagara Parkway",
+        "City_1": "Niagara on the Lake",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.0929920849997,
+          43.2449568470005
+        ]
+      },
+      "properties": {
+        "FID": 5,
+        "Wineries": "Jackson-Triggs",
+        "Address": "2145 Niagara Stone Rd",
+        "City_1": "Niagara on the Lake",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.1086086709997,
+          43.2327867140005
+        ]
+      },
+      "properties": {
+        "FID": 6,
+        "Wineries": "Joseph's Estate Wines",
+        "Address": "1811 Niagara Stone Rd",
+        "City_1": "Niagara on the Lake",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.1409836059997,
+          43.2500035480005
+        ]
+      },
+      "properties": {
+        "FID": 7,
+        "Wineries": "Konzelmann Estate Winery",
+        "Address": "1096 Lakeshore Rd",
+        "City_1": "Niagara on the Lake",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.0615634709997,
+          43.2318585210004
+        ]
+      },
+      "properties": {
+        "FID": 8,
+        "Wineries": "Lailey Vineyard Wines",
+        "Address": "15940 Niagara Pkwy",
+        "City_1": "Niagara on the Lake",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.1586317829996,
+          43.1639878670005
+        ]
+      },
+      "properties": {
+        "FID": 9,
+        "Wineries": "Maleta Estate",
+        "Address": "450 Queenston Rd",
+        "City_1": "Niagara on the Lake",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.0708782599996,
+          43.2059888650005
+        ]
+      },
+      "properties": {
+        "FID": 10,
+        "Wineries": "Marynissen Estates",
+        "Address": "1208 Concession 1 Rd",
+        "City_1": "Niagara on the Lake",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.2644429559996,
+          43.0130375010005
+        ]
+      },
+      "properties": {
+        "FID": 11,
+        "Wineries": "Niagara College",
+        "Address": "300 Woodlawn Rd",
+        "City_1": "Welland",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.1508458959997,
+          43.2451822220005
+        ]
+      },
+      "properties": {
+        "FID": 12,
+        "Wineries": "Palatine Hills Estate Winery",
+        "Address": "911 Lakeshore Rd",
+        "City_1": "Niagara on the Lake",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.0862232299996,
+          43.2525142860005
+        ]
+      },
+      "properties": {
+        "FID": 13,
+        "Wineries": "Peller Estates",
+        "Address": "290 John Street East",
+        "City_1": "Niagara on the Lake",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.1134658479996,
+          43.2290149550005
+        ]
+      },
+      "properties": {
+        "FID": 14,
+        "Wineries": "Pillitteri Estates Winery",
+        "Address": "1696 Niagara Stone Rd",
+        "City_1": "Niagara on the Lake",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.0591952369996,
+          43.2195484830005
+        ]
+      },
+      "properties": {
+        "FID": 15,
+        "Wineries": "Reif Estate",
+        "Address": "15608 Niagara Pkwy",
+        "City_1": "Niagara on the Lake",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.0563271459997,
+          43.2026696330005
+        ]
+      },
+      "properties": {
+        "FID": 16,
+        "Wineries": "Riverview Cellars",
+        "Address": "15376 Niagara Pkwy R.R.#1",
+        "City_1": "Niagara on the Lake",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.1639918549997,
+          43.1896367250005
+        ]
+      },
+      "properties": {
+        "FID": 17,
+        "Wineries": "Southbrook Vineyards",
+        "Address": "581 Niagara Stone Rd",
+        "City_1": "Niagara on the Lake",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.1711780109997,
+          43.2238690180005
+        ]
+      },
+      "properties": {
+        "FID": 18,
+        "Wineries": "Small Talk Vineyards",
+        "Address": "1242 Irvine Rd",
+        "City_1": "Niagara on the Lake",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.0973010599997,
+          43.2416069330005
+        ]
+      },
+      "properties": {
+        "FID": 19,
+        "Wineries": "Stratus Vineyards",
+        "Address": "2059 Niagara Stone Rd",
+        "City_1": "Niagara on the Lake",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.1254200309996,
+          43.2529947790005
+        ]
+      },
+      "properties": {
+        "FID": 20,
+        "Wineries": "Strewn Winery",
+        "Address": "1339 Lakeshore Rd",
+        "City_1": "Niagara on the Lake",
+        "Province": "ON"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.1199718979997,
+          43.2529065210005
+        ]
+      },
+      "properties": {
+        "FID": 21,
+        "Wineries": "Sunnybrook Farm Estate",
+        "Address": "1425 LAKESHORE RD RR 3",
+        "City_1": "Niagara on the Lake",
+        "Province": "ON"
+      }
+    }
+  ]
+}
