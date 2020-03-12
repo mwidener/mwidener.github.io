@@ -9,23 +9,23 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Lec8_4 :: GGR472 Winter 2020</title>
+    <title>TURF Examples :: GGR472 Winter 2020</title>
 
     
-    <link href="/css/nucleus.css?1584046964" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1584046964" rel="stylesheet">
-    <link href="/css/hybrid.css?1584046964" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1584046964" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1584046964" rel="stylesheet">
-    <link href="/css/auto-complete.css?1584046964" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1584046964" rel="stylesheet">
-    <link href="/css/theme.css?1584046964" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1584046964" rel="stylesheet">
+    <link href="/css/nucleus.css?1584048891" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1584048891" rel="stylesheet">
+    <link href="/css/hybrid.css?1584048891" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1584048891" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1584048891" rel="stylesheet">
+    <link href="/css/auto-complete.css?1584048891" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1584048891" rel="stylesheet">
+    <link href="/css/theme.css?1584048891" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1584048891" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1584046964" rel="stylesheet">
+      <link href="/css/theme-blue.css?1584048891" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1584046964"></script>
+    <script src="/js/jquery-3.3.1.min.js?1584048891"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -131,14 +131,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1584046964"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1584046964"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1584048891"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1584048891"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/mwidener.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1584046964"></script>
+<script type="text/javascript" src="/js/search.js?1584048891"></script>
 
     
   </div>
@@ -1521,13 +1521,13 @@
  
   
     
-    <li data-nav-id="/lecture8/lec8_3/" title="Basic TURF Functions" class="dd-item 
+    <li data-nav-id="/lecture8/lec8_3/" title="Setting up geojson" class="dd-item 
         
         
         
         ">
       <a href="/lecture8/lec8_3/">
-          Basic TURF Functions
+          Setting up geojson
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1547,13 +1547,13 @@
  
   
     
-    <li data-nav-id="/lecture8/lec8_4/" title="Lec8_4" class="dd-item 
+    <li data-nav-id="/lecture8/lec8_4/" title="TURF Examples" class="dd-item 
         parent
         active
         
         ">
       <a href="/lecture8/lec8_4/">
-          Lec8_4
+          TURF Examples
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1634,7 +1634,7 @@
             
           
           
-            <a href='/'>Home</a> > <a href='/lecture8/'>Introduction to TURF</a> > Lec8_4
+            <a href='/'>Home</a> > <a href='/lecture8/'>Introduction to TURF</a> > TURF Examples
           
          
           
@@ -1647,7 +1647,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#below-are--a-few-examples-using-turf">Below are  a few examples using TURF!</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1663,7 +1671,7 @@
           
             <h1>
               
-              Lec8_4
+              TURF Examples
             </h1>
           
 
@@ -1672,7 +1680,256 @@
 
 
 
-	
+	<h3 id="below-are--a-few-examples-using-turf">Below are  a few examples using TURF!</h3>
+<h4 id="measure-area-of-a-polygon">measure area of a polygon</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// //MEASURE AREA OF A POLYGON (only returns in square meters - must convert to other units &#39;by hand&#39;)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">area</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">turf</span>.<span style="color:#a6e22e">area</span>(<span style="color:#a6e22e">canadianProvinces</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Canada has an area (in square meters) of: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">area</span>);
+</code></pre></div><h4 id="iterate-through-provinces">iterate through provinces</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//ITERATE THROUGH ALL PROVINCES AND REPORT THEIR AREAS
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">canadianProvinces</span>.<span style="color:#a6e22e">features</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">feature</span>,<span style="color:#a6e22e">i</span>,<span style="color:#a6e22e">provinces</span>){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">feature</span>.<span style="color:#a6e22e">properties</span>.<span style="color:#a6e22e">PRVNAME</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; has an area (in square meters) of: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">turf</span>.<span style="color:#a6e22e">area</span>(<span style="color:#a6e22e">feature</span>));
+});
+</code></pre></div><h4 id="measure-distance-between-2-points">measure distance between 2 points</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//MEASURE DISTANCE BETWEEN 2 POINTS
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">points</span> <span style="color:#f92672">=</span> {
+  <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;FeatureCollection&#34;</span>,
+  <span style="color:#e6db74">&#34;features&#34;</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">canadianAirports</span>.<span style="color:#a6e22e">features</span>[<span style="color:#ae81ff">20</span>], <span style="color:#a6e22e">canadianAirports</span>.<span style="color:#a6e22e">features</span>[<span style="color:#ae81ff">832</span>]]
+};
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">distance_bw_points</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">turf</span>.<span style="color:#a6e22e">distance</span>(<span style="color:#a6e22e">points</span>.<span style="color:#a6e22e">features</span>[<span style="color:#ae81ff">0</span>],<span style="color:#a6e22e">points</span>.<span style="color:#a6e22e">features</span>[<span style="color:#ae81ff">1</span>],{<span style="color:#a6e22e">units</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;kilometers&#39;</span>});
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">distance_bw_points</span>);
+</code></pre></div><h4 id="create-a-bounding-box">create a bounding box</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//CREATE A BOUNDING BOX AROUND POINTS (ALSO USE FOR HEX GRID)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">enveloped</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">turf</span>.<span style="color:#a6e22e">envelope</span>(<span style="color:#a6e22e">canadianAirports</span>); <span style="color:#75715e">//send point geojson to turf, creates an &#39;envelope&#39; (bounding box) around points
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> {                                   <span style="color:#75715e">//put the resulting envelope in a geojson format FeatureCollection
+</span><span style="color:#75715e"></span>   <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;FeatureCollection&#34;</span>,
+   <span style="color:#e6db74">&#34;features&#34;</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">enveloped</span>]                      <span style="color:#75715e">//don&#39;t forget brackets
+</span><span style="color:#75715e"></span>};
+</code></pre></div><h4 id="create-a-hex-grid">create a hex grid</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//CREATE A HEX GRID
+</span><span style="color:#75715e">//must be in order: minX, minY, maxX, maxY ... you have to pick these out from your envelope that you created previously
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">bbox</span> <span style="color:#f92672">=</span> [<span style="color:#a6e22e">enveloped</span>.<span style="color:#a6e22e">geometry</span>.<span style="color:#a6e22e">coordinates</span>[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>],<span style="color:#a6e22e">enveloped</span>.<span style="color:#a6e22e">geometry</span>.<span style="color:#a6e22e">coordinates</span>[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">1</span>],<span style="color:#a6e22e">enveloped</span>.<span style="color:#a6e22e">geometry</span>.<span style="color:#a6e22e">coordinates</span>[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">2</span>][<span style="color:#ae81ff">0</span>],<span style="color:#a6e22e">enveloped</span>.<span style="color:#a6e22e">geometry</span>.<span style="color:#a6e22e">coordinates</span>[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">2</span>][<span style="color:#ae81ff">1</span>]];
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">hexgridUnits</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;kilometers&#39;</span> <span style="color:#75715e">//units that will determine the width of the hex grid
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">cellSide</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span> <span style="color:#75715e">//in the units you defined above
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">hexgrid</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">turf</span>.<span style="color:#a6e22e">hexGrid</span>(<span style="color:#a6e22e">bbox</span>,<span style="color:#a6e22e">cellSide</span>,{<span style="color:#a6e22e">units</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">hexgridUnits</span>}); <span style="color:#75715e">//makes the new geojson hexgrid features
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tempcoord</span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tempfeature</span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">coordinate_array</span> <span style="color:#f92672">=</span> []
+<span style="color:#a6e22e">canadianProvinces</span>.<span style="color:#a6e22e">features</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">feature</span>,<span style="color:#a6e22e">i</span>){
+ <span style="color:#a6e22e">tempfeature</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">turf</span>.<span style="color:#a6e22e">centroid</span>(<span style="color:#a6e22e">feature</span>)
+ <span style="color:#a6e22e">tempcoord</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tempfeature</span>.<span style="color:#a6e22e">geometry</span>.<span style="color:#a6e22e">coordinates</span>;
+ <span style="color:#a6e22e">coordinate_array</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">=</span> [<span style="color:#a6e22e">tempcoord</span>,<span style="color:#a6e22e">feature</span>.<span style="color:#a6e22e">properties</span>.<span style="color:#a6e22e">PRVNAME</span>];
+ <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;~~~~~~~~~~~~~~~&#34;</span>)
+ <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">coordinate_array</span>);
+ <span style="color:#a6e22e">feature</span>.<span style="color:#a6e22e">properties</span>.<span style="color:#a6e22e">NEWVAR</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;blah &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">i</span>;
+});
+</code></pre></div><h4 id="complete-code">Complete code:</h4>
+<h5 id="html">html</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">utf-8</span> /&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;TURF Examples&lt;/<span style="color:#f92672">title</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;viewport&#39;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;initial-scale=1,maximum-scale=1,user-scalable=no&#39;</span> /&gt;
+  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js&#39;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+  &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://api.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css&#39;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;stylesheet&#39;</span> /&gt;
+  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://npmcdn.com/@turf/turf/turf.min.js&#39;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+
+  &lt;<span style="color:#f92672">style</span>&gt;
+  <span style="color:#f92672">body</span> { <span style="color:#66d9ef">margin</span>:<span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">0</span>; }
+  #map { <span style="color:#66d9ef">position</span>:<span style="color:#66d9ef">absolute</span>; <span style="color:#66d9ef">top</span>:<span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">bottom</span>:<span style="color:#ae81ff">0</span>; <span style="color:#66d9ef">width</span>:<span style="color:#ae81ff">100</span><span style="color:#66d9ef">%</span>; }
+  &lt;/<span style="color:#f92672">style</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;map&#39;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;map&#39;</span>&gt; &lt;/<span style="color:#f92672">div</span>&gt;
+
+<span style="color:#75715e">&lt;!--Insert your geojson files here--&gt;</span>
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://mwidener.github.io/lecture8/utmToUTSG.geojson&#39;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://mwidener.github.io/lecture8/canadianAirports.geojson&#39;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://mwidener.github.io/lecture8/canadianProvinces.geojson&#39;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;./turfExamples1.js&#39;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">mapboxgl</span>.<span style="color:#a6e22e">accessToken</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;pk.eyJ1IjoibXdpZGVuZXIiLCJhIjoibXBKQU85dyJ9.Q6yf1zk7wpnYqpsQfRwVmw&#39;</span>;
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">map</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">mapboxgl</span>.<span style="color:#a6e22e">Map</span>({
+  <span style="color:#a6e22e">container</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;map&#39;</span>,
+  <span style="color:#a6e22e">style</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;mapbox://styles/mwidener/cjcotwplq3loj2ss0pjqmmigh&#39;</span>,
+  <span style="color:#a6e22e">center</span><span style="color:#f92672">:</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">90</span>, <span style="color:#ae81ff">50</span>],
+  <span style="color:#a6e22e">zoom</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>
+});
+
+<span style="color:#75715e">// //MEASURE AREA OF A POLYGON (only returns in square meters - must convert to other units &#39;by hand&#39;)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">area</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">turf</span>.<span style="color:#a6e22e">area</span>(<span style="color:#a6e22e">canadianProvinces</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Canada has an area (in square meters) of: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">area</span>);
+
+
+<span style="color:#75715e">// //ITERATE THROUGH ALL PROVINCES AND REPORT THEIR AREAS
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">canadianProvinces</span>.<span style="color:#a6e22e">features</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">feature</span>,<span style="color:#a6e22e">i</span>,<span style="color:#a6e22e">provinces</span>){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">feature</span>.<span style="color:#a6e22e">properties</span>.<span style="color:#a6e22e">PRVNAME</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; has an area (in square meters) of: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">turf</span>.<span style="color:#a6e22e">area</span>(<span style="color:#a6e22e">feature</span>));
+});
+
+
+<span style="color:#75715e">// //MEASURE A LINESTRING
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">linelength</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">turf</span>.<span style="color:#a6e22e">length</span>(<span style="color:#a6e22e">utmToUTSG</span>.<span style="color:#a6e22e">features</span>[<span style="color:#ae81ff">0</span>],{<span style="color:#a6e22e">units</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;kilometers&#39;</span>}); <span style="color:#75715e">//pick out the line feature you want to measure, and don&#39;t forget your units
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">linelength</span>); <span style="color:#75715e">//you can use this value for future calculations, or add this data to a pop up
+</span><span style="color:#75715e"></span>
+
+
+<span style="color:#75715e">//MEASURE DISTANCE BETWEEN 2 POINTS
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">points</span> <span style="color:#f92672">=</span> {
+  <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;FeatureCollection&#34;</span>,
+  <span style="color:#e6db74">&#34;features&#34;</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">canadianAirports</span>.<span style="color:#a6e22e">features</span>[<span style="color:#ae81ff">20</span>], <span style="color:#a6e22e">canadianAirports</span>.<span style="color:#a6e22e">features</span>[<span style="color:#ae81ff">832</span>]]
+};
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">distance_bw_points</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">turf</span>.<span style="color:#a6e22e">distance</span>(<span style="color:#a6e22e">points</span>.<span style="color:#a6e22e">features</span>[<span style="color:#ae81ff">0</span>],<span style="color:#a6e22e">points</span>.<span style="color:#a6e22e">features</span>[<span style="color:#ae81ff">1</span>],{<span style="color:#a6e22e">units</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#39;kilometers&#39;</span>});
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">distance_bw_points</span>);
+
+
+
+ <span style="color:#75715e">//CREATE A BOUNDING BOX AROUND POINTS (ALSO USE FOR HEX GRID)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">enveloped</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">turf</span>.<span style="color:#a6e22e">envelope</span>(<span style="color:#a6e22e">canadianAirports</span>); <span style="color:#75715e">//send point geojson to turf, creates an &#39;envelope&#39; (bounding box) around points
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> {                                   <span style="color:#75715e">//put the resulting envelope in a geojson format FeatureCollection
+</span><span style="color:#75715e"></span>    <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;FeatureCollection&#34;</span>,
+    <span style="color:#e6db74">&#34;features&#34;</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">enveloped</span>]                      <span style="color:#75715e">//don&#39;t forget brackets
+</span><span style="color:#75715e"></span>};
+
+
+
+ <span style="color:#75715e">//CREATE A HEX GRID
+</span><span style="color:#75715e"></span> <span style="color:#75715e">//must be in order: minX, minY, maxX, maxY ... you have to pick these out from your envelope that you created previously
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">bbox</span> <span style="color:#f92672">=</span> [<span style="color:#a6e22e">enveloped</span>.<span style="color:#a6e22e">geometry</span>.<span style="color:#a6e22e">coordinates</span>[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>],<span style="color:#a6e22e">enveloped</span>.<span style="color:#a6e22e">geometry</span>.<span style="color:#a6e22e">coordinates</span>[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">1</span>],<span style="color:#a6e22e">enveloped</span>.<span style="color:#a6e22e">geometry</span>.<span style="color:#a6e22e">coordinates</span>[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">2</span>][<span style="color:#ae81ff">0</span>],<span style="color:#a6e22e">enveloped</span>.<span style="color:#a6e22e">geometry</span>.<span style="color:#a6e22e">coordinates</span>[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">2</span>][<span style="color:#ae81ff">1</span>]];
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">hexgridUnits</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;kilometers&#39;</span> <span style="color:#75715e">//units that will determine the width of the hex grid
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">cellSide</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span> <span style="color:#75715e">//in the units you defined above
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">hexgrid</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">turf</span>.<span style="color:#a6e22e">hexGrid</span>(<span style="color:#a6e22e">bbox</span>,<span style="color:#a6e22e">cellSide</span>,{<span style="color:#a6e22e">units</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">hexgridUnits</span>}); <span style="color:#75715e">//makes the new geojson hexgrid features
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tempcoord</span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">tempfeature</span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">coordinate_array</span> <span style="color:#f92672">=</span> []
+<span style="color:#a6e22e">canadianProvinces</span>.<span style="color:#a6e22e">features</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">feature</span>,<span style="color:#a6e22e">i</span>){
+  <span style="color:#a6e22e">tempfeature</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">turf</span>.<span style="color:#a6e22e">centroid</span>(<span style="color:#a6e22e">feature</span>)
+  <span style="color:#a6e22e">tempcoord</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">tempfeature</span>.<span style="color:#a6e22e">geometry</span>.<span style="color:#a6e22e">coordinates</span>;
+  <span style="color:#a6e22e">coordinate_array</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">=</span> [<span style="color:#a6e22e">tempcoord</span>,<span style="color:#a6e22e">feature</span>.<span style="color:#a6e22e">properties</span>.<span style="color:#a6e22e">PRVNAME</span>];
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;~~~~~~~~~~~~~~~&#34;</span>)
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">coordinate_array</span>);
+  <span style="color:#a6e22e">feature</span>.<span style="color:#a6e22e">properties</span>.<span style="color:#a6e22e">NEWVAR</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;blah &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">i</span>;
+});
+
+
+<span style="color:#a6e22e">map</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;style.load&#39;</span>, <span style="color:#66d9ef">function</span>(){
+<span style="color:#75715e">//use this code to add geojson source if you&#39;re on a server:
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// map.addSource(&#39;airports&#39;,{
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   &#34;type&#34;: &#34;geojson&#34;,
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">//   &#34;data&#34;: &#34;./canadianAirports.geojson&#34;
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// });
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">//use this code to add geojson source if you&#39;re working locally...be sure
+</span><span style="color:#75715e">//to also change the geojson file so it has a &#39;var&#39; and add the file as a &lt;script&gt;
+</span><span style="color:#75715e">//in the html file
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">map</span>.<span style="color:#a6e22e">addSource</span>(<span style="color:#e6db74">&#39;airports&#39;</span>,{
+    <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;geojson&#34;</span>,
+    <span style="color:#e6db74">&#34;data&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">canadianAirports</span>
+  });
+  <span style="color:#a6e22e">map</span>.<span style="color:#a6e22e">addLayer</span>({
+      <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;airportsLayer&#34;</span>,
+      <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;circle&#34;</span>,
+      <span style="color:#e6db74">&#34;source&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;airports&#34;</span>,
+      <span style="color:#e6db74">&#34;layout&#34;</span><span style="color:#f92672">:</span> {},
+      <span style="color:#e6db74">&#34;paint&#34;</span><span style="color:#f92672">:</span>{
+        <span style="color:#e6db74">&#39;circle-color&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;blue&#34;</span>,
+        <span style="color:#e6db74">&#39;circle-radius&#39;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>,
+        <span style="color:#e6db74">&#39;circle-opacity&#39;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>
+      }
+  });
+  <span style="color:#a6e22e">map</span>.<span style="color:#a6e22e">addSource</span>(<span style="color:#e6db74">&#39;provinces&#39;</span>,{
+    <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;geojson&#34;</span>,
+    <span style="color:#e6db74">&#34;data&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">canadianProvinces</span>
+  })
+  <span style="color:#a6e22e">map</span>.<span style="color:#a6e22e">addLayer</span>({
+      <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;provincesLayer&#34;</span>,
+      <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;fill&#34;</span>,
+      <span style="color:#e6db74">&#34;source&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;provinces&#34;</span>,
+      <span style="color:#e6db74">&#34;layout&#34;</span><span style="color:#f92672">:</span> {},
+      <span style="color:#e6db74">&#34;paint&#34;</span><span style="color:#f92672">:</span>{
+        <span style="color:#e6db74">&#39;fill-color&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;blue&#34;</span>,
+        <span style="color:#e6db74">&#39;fill-opacity&#39;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.5</span>,
+        <span style="color:#e6db74">&#39;fill-outline-color&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;black&#34;</span>
+      }
+  },<span style="color:#e6db74">&#34;airportsLayer&#34;</span>);
+
+  <span style="color:#a6e22e">map</span>.<span style="color:#a6e22e">addSource</span>(<span style="color:#e6db74">&#39;utmToUTSG&#39;</span>,{
+    <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;geojson&#34;</span>,
+    <span style="color:#e6db74">&#34;data&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">utmToUTSG</span>
+  })
+  <span style="color:#a6e22e">map</span>.<span style="color:#a6e22e">addLayer</span>({
+      <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;utPath&#34;</span>,
+      <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;line&#34;</span>,
+      <span style="color:#e6db74">&#34;source&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;utmToUTSG&#34;</span>,
+      <span style="color:#e6db74">&#34;layout&#34;</span><span style="color:#f92672">:</span> {},
+      <span style="color:#e6db74">&#34;paint&#34;</span><span style="color:#f92672">:</span>{
+        <span style="color:#e6db74">&#39;line-color&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;red&#34;</span>,
+      }
+  },<span style="color:#e6db74">&#34;airportsLayer&#34;</span>);
+
+ <span style="color:#75715e">//MEASURE DISTANCE BETWEEN TWO POINTS EXAMPLE
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">map</span>.<span style="color:#a6e22e">addSource</span>(<span style="color:#e6db74">&#39;pointsDist&#39;</span>,{
+      <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;geojson&#34;</span>,
+      <span style="color:#e6db74">&#34;data&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">points</span>
+    })
+  <span style="color:#a6e22e">map</span>.<span style="color:#a6e22e">addLayer</span>({
+      <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;twoAirports&#34;</span>,
+      <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;circle&#34;</span>,
+      <span style="color:#e6db74">&#34;source&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;pointsDist&#34;</span>,
+      <span style="color:#e6db74">&#34;layout&#34;</span><span style="color:#f92672">:</span> {},
+      <span style="color:#e6db74">&#34;paint&#34;</span><span style="color:#f92672">:</span>{
+        <span style="color:#e6db74">&#39;circle-color&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;red&#34;</span>,
+        <span style="color:#e6db74">&#39;circle-radius&#39;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>,
+        <span style="color:#e6db74">&#39;circle-opacity&#39;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>
+      },
+  });
+
+ <span style="color:#75715e">//BOUNDING BOX EXAMPLE
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">map</span>.<span style="color:#a6e22e">addSource</span>(<span style="color:#e6db74">&#39;envelopeGeoJSON&#39;</span>,{
+    <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;geojson&#34;</span>,
+    <span style="color:#e6db74">&#34;data&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">result</span>                    <span style="color:#75715e">//this is the bounding box we just created!
+</span><span style="color:#75715e"></span>  })
+  <span style="color:#a6e22e">map</span>.<span style="color:#a6e22e">addLayer</span>({
+      <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;airportEnvelope&#34;</span>,
+      <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;fill&#34;</span>,
+      <span style="color:#e6db74">&#34;source&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;envelopeGeoJSON&#34;</span>,
+      <span style="color:#e6db74">&#34;layout&#34;</span><span style="color:#f92672">:</span> {},
+      <span style="color:#e6db74">&#34;paint&#34;</span><span style="color:#f92672">:</span>{
+        <span style="color:#e6db74">&#39;fill-color&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;red&#34;</span>,
+        <span style="color:#e6db74">&#39;fill-opacity&#39;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0.5</span>,
+        <span style="color:#e6db74">&#39;fill-outline-color&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;black&#34;</span>
+      }
+  },<span style="color:#e6db74">&#34;airportsLayer&#34;</span>);
+
+<span style="color:#75715e">// //HEXGRID EXAMPLE
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">map</span>.<span style="color:#a6e22e">addSource</span>(<span style="color:#e6db74">&#39;canadaHexGrid&#39;</span>,{
+    <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;geojson&#34;</span>,
+    <span style="color:#e6db74">&#34;data&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">hexgrid</span>                    <span style="color:#75715e">//this is the hexgrid we just created!
+</span><span style="color:#75715e"></span>  })
+  <span style="color:#a6e22e">map</span>.<span style="color:#a6e22e">addLayer</span>({
+      <span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;canadaHexGrid&#34;</span>,
+      <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;fill&#34;</span>,
+      <span style="color:#e6db74">&#34;source&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;canadaHexGrid&#34;</span>,
+      <span style="color:#e6db74">&#34;layout&#34;</span><span style="color:#f92672">:</span> {},
+      <span style="color:#e6db74">&#34;paint&#34;</span><span style="color:#f92672">:</span>{
+        <span style="color:#e6db74">&#39;fill-color&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;green&#34;</span>,
+        <span style="color:#e6db74">&#39;fill-opacity&#39;</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">.11</span>,
+        <span style="color:#e6db74">&#39;fill-outline-color&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;white&#34;</span>
+      }
+  },<span style="color:#e6db74">&#39;airportsLayer&#39;</span>);
+<span style="color:#75715e">//
+</span><span style="color:#75715e"></span>});
+
+</code></pre></div>
 
 
 
@@ -2572,7 +2829,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/lecture8/lec8_3/" title="Basic TURF Functions"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/lecture8/lec8_3/" title="Setting up geojson"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/lecture8/lec8_1/" title="What is TURF?" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -2585,19 +2842,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1584046964"></script>
-    <script src="/js/perfect-scrollbar.min.js?1584046964"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1584046964"></script>
-    <script src="/js/jquery.sticky.js?1584046964"></script>
-    <script src="/js/featherlight.min.js?1584046964"></script>
-    <script src="/js/highlight.pack.js?1584046964"></script>
+    <script src="/js/clipboard.min.js?1584048891"></script>
+    <script src="/js/perfect-scrollbar.min.js?1584048891"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1584048891"></script>
+    <script src="/js/jquery.sticky.js?1584048891"></script>
+    <script src="/js/featherlight.min.js?1584048891"></script>
+    <script src="/js/highlight.pack.js?1584048891"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1584046964"></script>
-    <script src="/js/learn.js?1584046964"></script>
-    <script src="/js/hugo-learn.js?1584046964"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1584048891"></script>
+    <script src="/js/learn.js?1584048891"></script>
+    <script src="/js/hugo-learn.js?1584048891"></script>
 
-    <link href="/mermaid/mermaid.css?1584046964" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1584046964"></script>
+    <link href="/mermaid/mermaid.css?1584048891" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1584048891"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

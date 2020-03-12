@@ -9,23 +9,23 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Basic TURF Functions :: GGR472 Winter 2020</title>
+    <title>Setting up geojson :: GGR472 Winter 2020</title>
 
     
-    <link href="/css/nucleus.css?1584046964" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1584046964" rel="stylesheet">
-    <link href="/css/hybrid.css?1584046964" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1584046964" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1584046964" rel="stylesheet">
-    <link href="/css/auto-complete.css?1584046964" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1584046964" rel="stylesheet">
-    <link href="/css/theme.css?1584046964" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1584046964" rel="stylesheet">
+    <link href="/css/nucleus.css?1584048891" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1584048891" rel="stylesheet">
+    <link href="/css/hybrid.css?1584048891" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1584048891" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1584048891" rel="stylesheet">
+    <link href="/css/auto-complete.css?1584048891" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1584048891" rel="stylesheet">
+    <link href="/css/theme.css?1584048891" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1584048891" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1584046964" rel="stylesheet">
+      <link href="/css/theme-blue.css?1584048891" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1584046964"></script>
+    <script src="/js/jquery-3.3.1.min.js?1584048891"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -131,14 +131,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1584046964"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1584046964"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1584048891"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1584048891"></script>
 <script type="text/javascript">
     
         var baseurl = "http:\/\/mwidener.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1584046964"></script>
+<script type="text/javascript" src="/js/search.js?1584048891"></script>
 
     
   </div>
@@ -1521,13 +1521,13 @@
  
   
     
-    <li data-nav-id="/lecture8/lec8_3/" title="Basic TURF Functions" class="dd-item 
+    <li data-nav-id="/lecture8/lec8_3/" title="Setting up geojson" class="dd-item 
         parent
         active
         
         ">
       <a href="/lecture8/lec8_3/">
-          Basic TURF Functions
+          Setting up geojson
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1547,13 +1547,13 @@
  
   
     
-    <li data-nav-id="/lecture8/lec8_4/" title="Lec8_4" class="dd-item 
+    <li data-nav-id="/lecture8/lec8_4/" title="TURF Examples" class="dd-item 
         
         
         
         ">
       <a href="/lecture8/lec8_4/">
-          Lec8_4
+          TURF Examples
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1634,7 +1634,7 @@
             
           
           
-            <a href='/'>Home</a> > <a href='/lecture8/'>Introduction to TURF</a> > Basic TURF Functions
+            <a href='/'>Home</a> > <a href='/lecture8/'>Introduction to TURF</a> > Setting up geojson
           
          
           
@@ -1651,7 +1651,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#below-are--a-few-examples-using-turf">Below are  a few examples using TURF!</a></li>
+        <li><a href="#we-need-our-geojson-files-to-act-like-javascript-variables">We need our geojson files to act like javascript variables.</a></li>
       </ul>
     </li>
   </ul>
@@ -1671,7 +1671,7 @@
           
             <h1>
               
-              Basic TURF Functions
+              Setting up geojson
             </h1>
           
 
@@ -1680,18 +1680,215 @@
 
 
 
-	<h3 id="below-are--a-few-examples-using-turf">Below are  a few examples using TURF!</h3>
-<h4 id="example">Example</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-</code></pre></div><h4 id="example-1">Example</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-</code></pre></div><h4 id="example-2">Example</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-</code></pre></div><h4 id="example-3">Example</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-</code></pre></div><h4 id="example-4">Example</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-</code></pre></div>
+	<h3 id="we-need-our-geojson-files-to-act-like-javascript-variables">We need our geojson files to act like javascript variables.</h3>
+<p>How do we do this? All it takes is a simple tweak to the geojson file.</p>
+<p>Simply add <code>var mygeojsonfilename = </code> before the first curly bracket.</p>
+<p>So for example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">utmToUTSG</span> <span style="color:#f92672">=</span> {
+  <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;FeatureCollection&#34;</span>,
+  <span style="color:#e6db74">&#34;features&#34;</span><span style="color:#f92672">:</span> [
+    {
+      <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Feature&#34;</span>,
+      <span style="color:#e6db74">&#34;properties&#34;</span><span style="color:#f92672">:</span> {},
+      <span style="color:#e6db74">&#34;geometry&#34;</span><span style="color:#f92672">:</span> {
+        <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;LineString&#34;</span>,
+        <span style="color:#e6db74">&#34;coordinates&#34;</span><span style="color:#f92672">:</span> [
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.66263771057129</span>,
+            <span style="color:#ae81ff">43.54487765059555</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.65937614440918</span>,
+            <span style="color:#ae81ff">43.54276236856476</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.65568542480469</span>,
+            <span style="color:#ae81ff">43.54126918362085</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.65293884277344</span>,
+            <span style="color:#ae81ff">43.53884267921116</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.65105056762695</span>,
+            <span style="color:#ae81ff">43.53598052284858</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.64890480041502</span>,
+            <span style="color:#ae81ff">43.53486051163794</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.62607383728027</span>,
+            <span style="color:#ae81ff">43.54773938461675</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.62109565734863</span>,
+            <span style="color:#ae81ff">43.54873473851718</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.61766242980956</span>,
+            <span style="color:#ae81ff">43.55215614218778</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.6168041229248</span>,
+            <span style="color:#ae81ff">43.55259157963129</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.61302757263184</span>,
+            <span style="color:#ae81ff">43.552218347729465</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.61139678955078</span>,
+            <span style="color:#ae81ff">43.552218347729465</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.61088180541992</span>,
+            <span style="color:#ae81ff">43.55582615929037</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.60521697998047</span>,
+            <span style="color:#ae81ff">43.56310332874207</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.60375785827637</span>,
+            <span style="color:#ae81ff">43.56478255071955</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.59302902221678</span>,
+            <span style="color:#ae81ff">43.574732535219056</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.5736312866211</span>,
+            <span style="color:#ae81ff">43.592203217066874</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.5615291595459</span>,
+            <span style="color:#ae81ff">43.60326743161359</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.55225944519043</span>,
+            <span style="color:#ae81ff">43.611471040985265</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.54848289489746</span>,
+            <span style="color:#ae81ff">43.61395676232749</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.53972816467284</span>,
+            <span style="color:#ae81ff">43.615386005576845</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.51981544494629</span>,
+            <span style="color:#ae81ff">43.61930071530575</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.48419570922852</span>,
+            <span style="color:#ae81ff">43.62675660019726</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.47999000549316</span>,
+            <span style="color:#ae81ff">43.62837192004496</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.47535514831543</span>,
+            <span style="color:#ae81ff">43.63185092304897</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.47097778320312</span>,
+            <span style="color:#ae81ff">43.63427368118269</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.46591377258301</span>,
+            <span style="color:#ae81ff">43.63688269609634</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.46205139160156</span>,
+            <span style="color:#ae81ff">43.63831139435743</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.45638656616211</span>,
+            <span style="color:#ae81ff">43.63911890443505</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.4502067565918</span>,
+            <span style="color:#ae81ff">43.638559860152576</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.44419860839844</span>,
+            <span style="color:#ae81ff">43.63700693207628</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.43449974060057</span>,
+            <span style="color:#ae81ff">43.63290700911552</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.43098068237305</span>,
+            <span style="color:#ae81ff">43.632472152394485</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.4245433807373</span>,
+            <span style="color:#ae81ff">43.633776713117946</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.41329956054688</span>,
+            <span style="color:#ae81ff">43.63706904996992</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.41003799438477</span>,
+            <span style="color:#ae81ff">43.63744175598323</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.40291404724121</span>,
+            <span style="color:#ae81ff">43.63775234256172</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.3927001953125</span>,
+            <span style="color:#ae81ff">43.63831139435743</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.39209938049315</span>,
+            <span style="color:#ae81ff">43.638559860152576</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.39987778663635</span>,
+            <span style="color:#ae81ff">43.657925383503695</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.39809143543243</span>,
+            <span style="color:#ae81ff">43.65827855515278</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.39885318279266</span>,
+            <span style="color:#ae81ff">43.660036620475</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.39863324165344</span>,
+            <span style="color:#ae81ff">43.6601103571893</span>
+          ],
+          [
+            <span style="color:#f92672">-</span><span style="color:#ae81ff">79.3995988368988</span>,
+            <span style="color:#ae81ff">43.66243107697202</span>
+          ]
+        ]
+      }
+    }
+  ]
+}
+</code></pre></div><h4 id="next-you-need-to-reference-this-file-in-your-html-file">Next you need to reference this file in your HTML file.</h4>
+<p>Add the following to your HTML, inside the body tags. You can likely reference these files locally on your own hard drive, but if that doesn&rsquo;t work, you can use the links I have provided below:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-HTML" data-lang="HTML">&lt;<span style="color:#f92672">body</span>&gt;
+
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;map&#39;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;map&#39;</span>&gt; &lt;/<span style="color:#f92672">div</span>&gt;
+
+<span style="color:#75715e">&lt;!--Insert your geojson files here--&gt;</span>
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://mwidener.github.io/lecture8/utmToUTSG.geojson&#39;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://mwidener.github.io/lecture8/canadianAirports.geojson&#39;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;https://mwidener.github.io/lecture8/canadianProvinces.geojson&#39;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;./turfExamples1.js&#39;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+</code></pre></div><p>Now we can access these geojson files as variables (whatever you named them&hellip;in the above example I have three variables canadianAirports, canadianProvinces, and utmToUTSG).</p>
+
 
 
 
@@ -2597,7 +2794,7 @@
 			<a class="nav nav-prev" href="/lecture8/lec8_2/" title="Using TURF"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/lecture8/lec8_4/" title="Lec8_4" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/lecture8/lec8_4/" title="TURF Examples" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2607,19 +2804,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1584046964"></script>
-    <script src="/js/perfect-scrollbar.min.js?1584046964"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1584046964"></script>
-    <script src="/js/jquery.sticky.js?1584046964"></script>
-    <script src="/js/featherlight.min.js?1584046964"></script>
-    <script src="/js/highlight.pack.js?1584046964"></script>
+    <script src="/js/clipboard.min.js?1584048891"></script>
+    <script src="/js/perfect-scrollbar.min.js?1584048891"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1584048891"></script>
+    <script src="/js/jquery.sticky.js?1584048891"></script>
+    <script src="/js/featherlight.min.js?1584048891"></script>
+    <script src="/js/highlight.pack.js?1584048891"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1584046964"></script>
-    <script src="/js/learn.js?1584046964"></script>
-    <script src="/js/hugo-learn.js?1584046964"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1584048891"></script>
+    <script src="/js/learn.js?1584048891"></script>
+    <script src="/js/hugo-learn.js?1584048891"></script>
 
-    <link href="/mermaid/mermaid.css?1584046964" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1584046964"></script>
+    <link href="/mermaid/mermaid.css?1584048891" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1584048891"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
