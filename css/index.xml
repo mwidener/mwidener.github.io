@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on GGR472 Winter 2020</title>
+    <link>http://mwidener.github.io/</link>
+    <description>Recent content in Home on GGR472 Winter 2020</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 06 Nov 2019 18:06:35 -0500</lastBuildDate>
+    
+	<atom:link href="http://mwidener.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Syllabus</title>
+      <link>http://mwidener.github.io/introduction/syllabus/</link>
+      <pubDate>Thu, 07 Nov 2019 14:06:35 -0500</pubDate>
+      
+      <guid>http://mwidener.github.io/introduction/syllabus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Instructor Information</title>
+      <link>http://mwidener.github.io/introduction/instructor_info/</link>
+      <pubDate>Thu, 07 Nov 2019 00:00:00 -0500</pubDate>
+      
+      <guid>http://mwidener.github.io/introduction/instructor_info/</guid>
+      <description>Prof. Michael Widener email michael michael DOT widener AT utoronto DOT ca
+office hours: Thursdays 1pm - 3pm Sid Smith Hall 5037
+Additional resources  Mapbox GL JS API Mapbox GL JS Examples  </description>
+    </item>
+    
+  </channel>
+</rss>
